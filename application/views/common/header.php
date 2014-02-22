@@ -17,7 +17,7 @@
     <div class="header">
         <div class="container">
             <h1 class="logo">
-                <img src="/style/images/logo.gif" width="200" height="60" alt=""></h1>
+                <img src="/style/images/logo.jpg" width="200" height="60" alt=""></h1>
             <ul class="nav pull-right clearfix">
                 <li>
                     <a href="/index">首页</a>
