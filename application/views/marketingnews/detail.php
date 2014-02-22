@@ -2,7 +2,7 @@
 load->view('/common/header.php'); ?>
 <div class="banner">
     <div class="container">
-        <img width="1000" height="200" src="/style/images/banner_news.jpg" alt="" class="ad"></div>
+        <img src="/style/images/banner_news.gif" alt=""></div>
 </div>
 <div class="container">
     <div class="main">

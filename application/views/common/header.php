@@ -29,7 +29,7 @@
                     <a href="/case">案例展示</a>
                 </li>
                 <li>
-                    <a href="/news">营销动态</a>
+                    <a href="/marketingnews">营销动态</a>
                 </li>
                 <li>
                     <a href="/contact">业务联系</a>
