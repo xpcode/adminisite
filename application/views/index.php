@@ -2,7 +2,7 @@
 load->view('/common/header.php'); ?>
 
 <div class="banner bg_FFFFFF">
-    <div class="container">
+    <div class="container h320">
         <img width="1000" height="320" src="/style/images/banner_index.gif" alt="焦点图">
         <ul class="rotate-btns clearfix">
             <li></li>
@@ -46,21 +46,21 @@ load->view('/common/header.php'); ?>
                 <div class="qalist-group-bg clearfix">
                     <div class="qalist">
                         <div class="qalistitem-title">什么是雅昌推广？</div>
-                        <div class="qalist-item">什么是雅昌推广？</div>
-                        <div class="qalist-item">雅昌推广是如何展现的？</div>
-                        <div class="qalist-item">雅昌推广如何计费？</div>
+                        <div class="qalist-item"><a href="">什么是雅昌推广？</a></div>
+                        <div class="qalist-item"><a href="">雅昌推广是如何展现的？</a></div>
+                        <div class="qalist-item"><a href="">雅昌推广如何计费？</a></div>
                     </div>
                     <div class="qalist">
                         <div class="qalistitem-title">什么是雅昌推广？</div>
-                        <div class="qalist-item">雅昌推广的优势是什么？</div>
-                        <div class="qalist-item">雅昌推广如何控制预算？</div>
-                        <div class="qalist-item">雅昌提供清晰的消费账单么？</div>
+                        <div class="qalist-item"><a href="">雅昌推广的优势是什么？</a></div>
+                        <div class="qalist-item"><a href="">雅昌推广如何控制预算？</a></div>
+                        <div class="qalist-item"><a href="">雅昌提供清晰的消费账单么？</a></div>
                     </div>
                     <div class="qalist">
                         <div class="qalistitem-title ml25">什么是雅昌推广？</div>
-                        <div class="qalist-item ml25">如何申请购买雅昌推广服务？</div>
-                        <div class="qalist-item ml25">我想购买，怎么付款？</div>
-                        <div class="qalist-item ml25">雅昌推广开户流程是什么？</div>
+                        <div class="qalist-item ml25"><a href="">如何申请购买雅昌推广服务？</a></div>
+                        <div class="qalist-item ml25"><a href="">我想购买，怎么付款？</a></div>
+                        <div class="qalist-item ml25"><a href="">雅昌推广开户流程是什么？</a></div>
                     </div>
                 </div>
             </div>

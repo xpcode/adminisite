@@ -1,4 +1,4 @@
-.header,.footer,.banner{background-color:#393;color:#fff;width:100%;font-family:"微软雅黑"}
+.header,.footer,.banner{background-color:#393;color:#fff;width:100%;font-family:"microsoft yahei"}
 .header{height:120px;line-height:120px}.header .logo{width:200px;*margin-top:30px}.header .logo a:hover{text-decoration:none}
 .header .nav{display:inline-block;margin-top:52px;*margin-top:-48px}.header .nav li{position:relative;float:left;font-size:16px;margin-left:80px;display:inline-block}.header .nav li a{color:#fff}
 .header .nav li a:hover{background:none;text-decoration:underline}
@@ -27,10 +27,10 @@
 .main .subnav .telphone{padding:30px 0 0 14px;font-size:16px;color:#359734}.main .subnav .telphone .numbers{font-size:26px;font-weight:bold;margin-top:15px}
 .main .content{width:770px;margin-left:28px}.main .content .non-border{border:0 !important}
 .main .content .crumbs{height:33px;line-height:33px;text-align:right;border-top:1px solid #ccc;border-bottom:1px dotted #ccc}.main .content .crumbs span,.main .content .crumbs a{color:#666}
-.main .content .list-block{width:710px;line-height:25px;margin:34px auto 0;font-family:"微软雅黑";font-size:15px;border-bottom:1px dotted #ccc}.main .content .list-block .list-item{margin-bottom:12px;font-family:"微软雅黑";font-size:16px}.main .content .list-block .list-item a{color:#666}
+.main .content .list-block{width:710px;line-height:25px;margin:34px auto 0;font-family:"microsoft yahei";font-size:15px;border-bottom:1px dotted #ccc}.main .content .list-block .list-item{margin-bottom:12px;font-family:"microsoft yahei";font-size:16px}.main .content .list-block .list-item a{color:#666}
 .main .content .list-block .list-item .date{font-family:"宋体";font-size:14px}
 .main .content .list-block .w295px{width:295px}
-.main .content .list-block .area-title{font-family:"微软雅黑";font-size:29px;font-weight:normal;color:#393;margin:35px 0 30px}
+.main .content .list-block .area-title{font-family:"microsoft yahei";font-size:29px;font-weight:normal;color:#393;margin:35px 0 30px}
 .main .content .list-block .types-title{font-size:22px;font-weight:normal;color:#393}
 .main .content .list-block-small-group{border-bottom:1px dotted #ccc;padding:28px 0}
 .main .content .list-block-small{width:355px;float:left}.main .content .list-block-small .pl23{padding-left:23px}
@@ -42,13 +42,13 @@
 .main .content .pager .btn-disabled{background-color:#ccc}
 .main .content .article{padding-left:28px}
 .main .content .article-title{display:block;font-size:25px;text-align:center;color:#393;margin:35px 0 13px}
-.main .content .article-title-small{color:#666;font-family:"微软雅黑";font-size:14px;margin:0 0 4px}
+.main .content .article-title-small{color:#666;font-family:"microsoft yahei";font-size:14px;margin:0 0 4px}
 .main .content .list-item-large{margin:30px 0 35px}
 .main .content .article-date{font-size:12px;text-align:center;color:#ccc}
 .main .content .article-date-small{color:#999}
 .main .content .article-img-small img{width:396px;height:132px}
 .main .content .article-hr{margin:30px auto;width:600px}
-.main .content .article-content-small{color:#999;font-family:"微软雅黑";font-size:14px;height:94px;overflow:hidden;line-height:23px}.main .content .article-content-small .more{background-color:#393;color:#fff}
+.main .content .article-content-small{color:#999;font-family:"microsoft yahei";font-size:14px;height:94px;overflow:hidden;line-height:23px}.main .content .article-content-small .more{background-color:#393;color:#fff}
 .main .guide{height:94px;color:#393;line-height:100px}.main .guide .font1{font-size:22px}
 .main .guide .font2{font-size:43px;font-weight:bold}
 .main .guide .font3{font-size:34px;font-weight:bold}
@@ -56,15 +56,15 @@
 .main .tel{margin-bottom:30px}
 .main .notice-block{height:194px}.main .notice-block h3{margin:0;margin-bottom:10px;padding:0}
 .main .notice-block ul,.main .notice-block li{margin:0}
-.main .notice-block .notice-block-item{height:28px;line-height:28px;font-family:"微软雅黑";font-size:13px}.main .notice-block .notice-block-item a{color:#999}
+.main .notice-block .notice-block-item{height:28px;line-height:28px;font-family:"microsoft yahei";font-size:13px}.main .notice-block .notice-block-item a{color:#999}
 .main .grid-group{width:710px}.main .grid-group .grid{float:left;margin-right:16px;margin-bottom:16px}
-.main .qalist-group{border:1px solid #ccc;background-color:#fff;width:686px;height:158px;font-family:"微软雅黑"}.main .qalist-group .qalist-group-bg{width:666px;margin:10px auto 0;background:url(images/bg_index_title.gif) no-repeat}
+.main .qalist-group{border:1px solid #ccc;background-color:#fff;width:686px;height:158px;font-family:"microsoft yahei"}.main .qalist-group .qalist-group-bg{width:666px;margin:10px auto 0;background:url(images/bg_index_title.gif) no-repeat}
 .main .qalist-group .qalistitem-title{padding-left:41px;color:#fff;height:36px;line-height:36px}
 .main .qalist-group .qalist{width:215px;float:left}
-.main .qalist-group .qalist-item{color:#999;height:33px;line-height:40px;padding-left:15px;font-size:13px}
+.main .qalist-group .qalist-item{color:#999;height:33px;line-height:40px;padding-left:15px;font-size:13px}.main .qalist-group .qalist-item a{color:#999}
 .main .qalist-group .ml25{margin-left:25px}
 .main .icons-list,.main .icons-list-large{width:686px}.main .icons-list .icons-list-item,.main .icons-list-large .icons-list-item,.main .icons-list img,.main .icons-list-large img{width:88px;height:43px}
 .main .icons-list .icons-list-item,.main .icons-list-large .icons-list-item{float:left;margin-right:10px;margin-bottom:10px}
 .main .icons-list-large{width:710px;margin:35px 0 0 30px}.main .icons-list-large .icons-list-item{border:1px solid #ccc}
 .main .imgblock-list{margin:35px 0 0}.main .imgblock-list .imgblock-list-item{float:left;width:145px;height:145px;border:5px solid #393;margin-left:30px;margin-bottom:45px}.main .imgblock-list .imgblock-list-item img{display:block;width:145px;height:145px}
-.main .imgblock-list .imgblock-list-item div{padding:5px;text-align:center}.main .imgblock-list .imgblock-list-item div a{font-family:"微软雅黑";font-size:12px;color:#393}
+.main .imgblock-list .imgblock-list-item div{padding:5px;text-align:center}.main .imgblock-list .imgblock-list-item div a{font-family:"microsoft yahei";font-size:12px;color:#393}
