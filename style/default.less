@@ -80,12 +80,20 @@
 
 	img {
 		width: 1000px;
-		height: 320px;
+		height: 200px;
 	}
 
 	.container {
 		position: relative;
+		height: 200px;
+	}
+
+	.h320 {
 		height: 320px;
+
+		img {
+			height: 320px;
+		}
 	}
 
 	.rotate-btns {
@@ -111,6 +119,10 @@
 
 .bg_EDEEE8 {
 	background-color: #EDEEE8;
+}
+
+.bg_F4A814 {
+	background-color: #F4A814;
 }
 
 .bg_grid {
@@ -317,6 +329,10 @@
 				color: #339933;
 			}
 
+			.active {
+				text-decoration: underline;
+			}
+
 			.btn-prev, .btn-next {
 				background: none;
 				background-color: #339933;
@@ -496,7 +512,7 @@
 		}
 	}
 
-	.icons-list {
+	.icons-list, .icons-list-large {
 		width: 686px;
 
 		.icons-list-item, img {
@@ -508,6 +524,45 @@
 			float: left;
 			margin-right: 10px;
 			margin-bottom: 10px;
+		}
+	}
+
+	.icons-list-large {
+		width: 710px;
+		margin: 35px 0 0 30px;
+
+		.icons-list-item {
+			border: 1px solid #CCC;
+		}
+	}
+
+	.imgblock-list{
+		margin: 35px 0 0;
+
+		.imgblock-list-item {
+			float: left;
+			width: 145px;
+			height: 145px;
+			border: 5px solid #339933;
+			margin-left: 30px;
+			margin-bottom: 45px;
+
+			img {
+				display: block;
+				width: 145px;
+				height: 145px;
+			}
+
+			div {
+				padding: 5px;
+				text-align: center;
+
+				a {
+					font-family: "微软雅黑";
+					font-size: 12px;
+					color: #393;
+				}
+			}
 		}
 	}
 }
