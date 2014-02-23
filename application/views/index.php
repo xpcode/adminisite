@@ -1,118 +1,142 @@
 <?php $this->
 load->view('/common/header.php'); ?>
-<div class="banner">
+
+<div class="banner bg_FFFFFF">
     <div class="container">
-        <img width="1000" height="200" src="/style/images/banner_news.jpg" alt="" class="ad"></div>
+        <img width="1000" height="320" src="/style/images/banner_index.gif" alt="焦点图">
+        <ul class="rotate-btns clearfix">
+            <li></li>
+            <li></li>
+            <li class="active"></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
 </div>
-<div class="container">
-    <div class="main">
-        <div class="clearfix">
-            <div class="subnav pull-left">
-                <h2>营销动态</h2>
-                <div class="hr"></div>
+<div class="main bg_grid">
+    <div class="container">
+        <div class="guide">
+            <span class="font1">我们</span>
+            <span class="font2">有的...</span>
+        </div>
+        <div class="pull-left w690">
+            <div class="grid-group clearfix">
+                <div class="grid">
+                    <img src="/style/images/index_r2_c2.gif" alt="广告宣传"></div>
+                <div class="grid">
+                    <img src="/style/images/index_r2_c3.gif" alt="艺术导购"></div>
+                <div class="grid">
+                    <img src="/style/images/index_r2_c4.gif" alt="拍卖预展"></div>
+                <div class="grid">
+                    <img src="/style/images/index_r2_c5.gif" alt="地方分站"></div>
+                <div class="grid">
+                    <img src="/style/images/index_r2_c9.gif" alt="艺术数据"></div>
+                <div class="grid">
+                    <img src="/style/images/index_r2_c8.gif" alt="电子商务"></div>
+                <div class="grid">
+                    <img src="/style/images/index_r2_c7.gif" alt="艺术宣传"></div>
+                <div class="grid">
+                    <img src="/style/images/index_r2_c6.gif" alt="数字资产"></div>
+            </div>
+            <div class="guide">
+                <span class="font1">你想</span>
+                <span class="font2">知道的...</span>
+            </div>
+            <div class="qalist-group">
+                <div class="qalist-group-bg clearfix">
+                    <div class="qalist">
+                        <div class="qalistitem-title">什么是雅昌推广？</div>
+                        <div class="qalist-item">什么是雅昌推广？</div>
+                        <div class="qalist-item">雅昌推广是如何展现的？</div>
+                        <div class="qalist-item">雅昌推广如何计费？</div>
+                    </div>
+                    <div class="qalist">
+                        <div class="qalistitem-title">什么是雅昌推广？</div>
+                        <div class="qalist-item">雅昌推广的优势是什么？</div>
+                        <div class="qalist-item">雅昌推广如何控制预算？</div>
+                        <div class="qalist-item">雅昌提供清晰的消费账单么？</div>
+                    </div>
+                    <div class="qalist">
+                        <div class="qalistitem-title ml25">什么是雅昌推广？</div>
+                        <div class="qalist-item ml25">如何申请购买雅昌推广服务？</div>
+                        <div class="qalist-item ml25">我想购买，怎么付款？</div>
+                        <div class="qalist-item ml25">雅昌推广开户流程是什么？</div>
+                    </div>
+                </div>
+            </div>
+            <div class="guide">
+                <span class="font1">与我们</span>
+                <span class="font2">合作的...</span>
+            </div>
+            <div class="icons-list clearfix">
+                <div class="icons-list-item">
+                    <img src="/style/images/logo_01.gif" alt=""></div>
+                <div class="icons-list-item">
+                    <img src="/style/images/logo_02.gif" alt=""></div>
+                <div class="icons-list-item">
+                    <img src="/style/images/logo_03.gif" alt=""></div>
+                <div class="icons-list-item">
+                    <img src="/style/images/logo_04.gif" alt=""></div>
+                <div class="icons-list-item">
+                    <img src="/style/images/logo_05.gif" alt=""></div>
+                <div class="icons-list-item">
+                    <img src="/style/images/logo_06.gif" alt=""></div>
+                <div class="icons-list-item">
+                    <img src="/style/images/logo_07.gif" alt=""></div>
+                <div class="icons-list-item">
+                    <img src="/style/images/logo_08.gif" alt=""></div>
+                <div class="icons-list-item">
+                    <img src="/style/images/logo_09.gif" alt=""></div>
+                <div class="icons-list-item">
+                    <img src="/style/images/logo_10.gif" alt=""></div>
+                <div class="icons-list-item">
+                    <img src="/style/images/logo_11.gif" alt=""></div>
+                <div class="icons-list-item">
+                    <img src="/style/images/logo_12.gif" alt=""></div>
+                <div class="icons-list-item">
+                    <img src="/style/images/logo_13.gif" alt=""></div>
+                <div class="icons-list-item">
+                    <img src="/style/images/logo_14.gif" alt=""></div>
+            </div>
+        </div>
+        <div class="pull-right w280">
+            <div class="tel">
+                <img src="/style/images/index_tel.gif" alt=""></div>
+            <div class="notice-block">
+                <h3>
+                    <img src="/style/images/bg_notice.gif" alt="公告"></h3>
                 <ul>
-                    <li class="active">
-                        <a href="">雅昌公告</a>
-
-                        <div class="hr"></div>
+                    <li class="notice-block-item">
+                        <a href="">111111</a>
                     </li>
-                    <li>
-                        <a href="">最新动态</a>
-
-                        <div class="hr"></div>
+                    <li class="notice-block-item">
+                        <a href="">111111</a>
                     </li>
-                    <li>
-                        <a href="">营销优惠</a>
-
-                        <div class="hr"></div>
+                    <li class="notice-block-item">
+                        <a href="">111111</a>
                     </li>
-                    <li>
-                        <a href="">答疑解惑</a>
-
-                        <div class="hr"></div>
+                    <li class="notice-block-item">
+                        <a href="">111111</a>
+                    </li>
+                    <li class="notice-block-item">
+                        <a href="">111111</a>
                     </li>
                 </ul>
-                <div class="telphone">
-                    <div class="title">全国免费电话 :</div>
-                    <div class="numbers">400-690-1016</div>
-                </div>
             </div>
-            <div class="content pull-left">
-                <div class="crumbs">
-                    <span>
-                        <a href="/index">首页</a>
-                    </span>
-                    >
-                    <span>营销动态</span>
-                </div>
-                <div class="list-block">
-                    <div class="list-item-large clearfix">
-                        <div class="pull-left article-img-small">
-                            <img src="/style/images/banner_news.jpg" alt="" width="396" height="132"></div>
-                        <div class="pull-right w295px">
-                            <h4 class="article-title-small">打扫打扫打扫</h4>
-                            <div class="article-content-small">
-                                打扫打扫打扫打扫打扫打扫打扫打打扫打扫打扫打扫打扫打扫打扫打扫打扫打扫打扫打扫打扫打扫打扫打扫打扫打扫打扫打扫打扫打扫打扫打扫打扫打扫打扫打扫打扫
-                                <a href="" class="more">更多信息</a>
-                            </div>
-                            <div class="article-date-small">2013-12-12</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="list-block">
-                    <div class="list-item-large clearfix">
-                        <div class="pull-left article-img-small">
-                            <img src="/style/images/banner_news.jpg" alt="" width="396" height="132"></div>
-                        <div class="pull-right w295px">
-                            <h4 class="article-title-small">打扫打扫打扫</h4>
-                            <div class="article-content-small">
-                                打扫打扫打扫打扫打扫打扫打扫打打扫打扫打扫打扫打扫打扫打扫打扫打扫打扫打扫打扫打扫打扫打扫打扫打扫打扫打扫打扫打扫打扫打扫打扫打扫打扫打扫打扫打扫
-                                <a href="" class="more">更多信息</a>
-                            </div>
-                            <div class="article-date-small">2013-12-12</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="list-block">
-                    <div class="list-item-large clearfix">
-                        <div class="pull-left article-img-small">
-                            <img src="/style/images/banner_news.jpg" alt="" width="396" height="132"></div>
-                        <div class="pull-right w295px">
-                            <h4 class="article-title-small">打扫打扫打扫</h4>
-                            <div class="article-content-small">
-                                打扫打扫打扫打扫打扫打扫打扫打打扫打扫打扫打扫打扫打扫打扫打扫打扫打扫打扫打扫打扫打扫打扫打扫打扫打扫打扫打扫打扫打扫打扫打扫打扫打扫打扫打扫打扫
-                                <a href="" class="more">更多信息</a>
-                            </div>
-                            <div class="article-date-small">2013-12-12</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="pager">
-                    <ul>
-                        <li>
-                            <a href="" class="btn btn-prev">上一页</a>
-                        </li>
-                        <li>
-                            <a href="">1</a>
-                        </li>
-                        <li>
-                            <a href="">2</a>
-                        </li>
-                        <li>
-                            <a href="" class="active">3</a>
-                        </li>
-                        <li>
-                            <a href="">4</a>
-                        </li>
-                        <li>
-                            <a href="">5</a>
-                        </li>
-                        <li>
-                            <a href="" class="btn btn-next btn-disabled">下一页</a>
-                        </li>
-                    </ul>
-                </div>
+            <div class="guide">
+                <span class="font1">我们可以</span>
+                <span class="font3">这样联系...</span>
             </div>
+            <div class="contacts">
+                <ul>
+                    <li>1</li>
+                    <li>2</li>
+                    <li>3</li>
+                    <li>4</li>
+                </ul>
+            </div>
+            <div>
+                <img src="/style/images/index_r2.gif" alt=""></div>
         </div>
     </div>
 </div>

@@ -12,6 +12,10 @@
 	.logo {
 		width: 200px;
 		*margin-top: 30px;
+
+		a:hover {
+			text-decoration: none;
+		}
 	}
 
 	.nav {
@@ -20,6 +24,7 @@
 		*margin-top: -48px;
 
 		li {
+			position: relative;
 			float: left;
 			font-size: 16px;
 			margin-left: 80px;
@@ -28,6 +33,36 @@
 			a {
 				color: #FFF;
 			}
+
+			a:hover {
+				background: none;
+				text-decoration: underline;
+			}
+
+			em {
+				position: absolute;
+				top: 59px;
+				right: 22px;
+				display: none;
+                border-color: transparent transparent #FFF;
+                border-style: solid;
+                border-width: 0px 9px 9px;
+                font-size: 0;
+                line-height: 0;    
+                width: 0;
+                height: 0;
+                _border-top-color: white;
+                _border-bottom-color: white;
+                _filter: chroma( color =white);
+			}
+
+			.left8 {
+				left: 8px;
+			}
+		}
+
+		li.active em{
+			display: block;
 		}
 	}
 }
@@ -42,11 +77,53 @@
 .banner {
 	border-bottom: 1px solid #EBEBEB;
 	background-color: #FFF;
-	margin-bottom: 50px;
+
+	img {
+		width: 1000px;
+		height: 320px;
+	}
+
+	.container {
+		position: relative;
+		height: 320px;
+	}
+
+	.rotate-btns {
+		position: absolute;
+		top: 297px;
+		left: 390px;
+		margin: 0;
+
+		li {
+			width: 40px;
+			height: 12px;
+			background-color: #EBEBEB;
+			float: left;
+			margin-right: 5px;
+			cursor: pointer;
+		}
+
+		li.active {
+			background-color: #339933;
+		}
+	}
 }
 
 .bg_EDEEE8 {
 	background-color: #EDEEE8;
+}
+
+.bg_grid {
+	background: url(images/bg_grid.gif) repeat;
+	padding-bottom: 80px;
+}
+
+.mb50 {
+	margin-bottom: 50px;
+}
+
+.mb112 {
+	margin-bottom: 112px;
 }
 
 .container {
@@ -63,8 +140,6 @@
 }
 
 .main {
-	margin-bottom: 112px;
-
 	.subnav {
 		width: 200px;
 		height: 1024px;
@@ -315,6 +390,124 @@
 				background-color: #339933;
 				color: #FFF;
 			}
+		}
+	}
+
+	.guide {
+		height: 94px;
+		color: #339933;
+		line-height: 100px;
+
+		.font1 {
+			font-size: 22px;
+		}
+
+		.font2 {
+			font-size: 43px;
+			font-weight: bold;
+		}
+
+		.font3 {
+			font-size: 34px;
+			font-weight: bold;
+		}
+	}
+
+	.contacts {
+		width: 280px;
+		height: 58px;
+		margin-bottom: 22px;
+	}
+
+	.tel {
+		margin-bottom: 30px;
+	}
+
+	.notice-block {
+		height: 194px;
+
+		h3 {
+			margin: 0;
+			margin-bottom: 10px;
+			padding: 0;
+		}
+
+		ul, li {
+			margin: 0;
+		}
+
+		.notice-block-item {
+			height: 28px;
+			line-height: 28px;
+			font-family: "微软雅黑";
+			font-size: 13px;
+
+			a {
+				color: #999;
+			}
+		}
+	}
+
+	.grid-group {
+		width: 710px;
+
+		.grid {
+			float: left;
+			margin-right: 16px;
+			margin-bottom: 16px;
+		}
+	}
+
+	.qalist-group {
+		border: 1px solid #CCC;
+		background-color: #FFF;
+		width: 686px;
+		height: 158px;
+		font-family: "微软雅黑";
+
+		.qalist-group-bg {
+			width: 666px;
+			margin: 10px auto 0;
+			background: url(images/bg_index_title.gif) no-repeat;
+		}
+
+		.qalistitem-title {
+			padding-left: 41px;
+			color: #FFF;
+			height: 36px;
+			line-height: 36px;
+		}
+
+		.qalist {
+			width: 215px;
+			float: left;
+		}
+
+		.qalist-item {
+			color: #999;
+			height: 33px;
+			line-height: 40px;
+			padding-left: 15px;
+			font-size: 13px;
+		}
+
+		.ml25 {
+			margin-left: 25px;
+		}
+	}
+
+	.icons-list {
+		width: 686px;
+
+		.icons-list-item, img {
+			width: 88px;
+			height: 43px;
+		}
+
+		.icons-list-item {
+			float: left;
+			margin-right: 10px;
+			margin-bottom: 10px;
 		}
 	}
 }

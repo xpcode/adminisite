@@ -1,11 +1,11 @@
 <?php $this->
 load->view('/common/header.php'); ?>
-<div class="banner bg_EDEEE8">
+<div class="banner bg_EDEEE8 mb50">
     <div class="container">
         <img width="1000" height="200" src="/style/images/banner_contact.gif" alt=""></div>
 </div>
 <div class="container">
-    <div class="main">
+    <div class="main mb112">
         <div class="clearfix">
             <div class="subnav pull-left">
                 <h2>业务联系</h2>

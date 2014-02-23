@@ -1,11 +1,11 @@
 <?php $this->
 load->view('/common/header.php'); ?>
-<div class="banner">
+<div class="banner mb50">
     <div class="container">
         <img src="/style/images/banner_news.gif" alt=""></div>
 </div>
 <div class="container">
-    <div class="main">
+    <div class="main mb112">
         <div class="clearfix">
             <div class="subnav pull-left">
                 <h2>营销动态</h2>

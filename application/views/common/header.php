@@ -17,22 +17,27 @@
     <div class="header">
         <div class="container">
             <h1 class="logo">
-                <img src="/style/images/logo.jpg" width="200" height="60" alt=""></h1>
+                <a href="/">
+                    <img src="/style/images/logo.jpg" width="200" height="60" alt=""></a>
+            </h1>
             <ul class="nav pull-right clearfix">
-                <li>
-                    <a href="/index">首页</a>
+                <li class="active">
+                    <a href="/index">首页</a> <em class="left8"></em>
                 </li>
                 <li>
-                    <a href="/service">产品服务</a>
+                    <a href="/service">产品服务</a> <em></em>
                 </li>
                 <li>
                     <a href="/case">案例展示</a>
+                    <em></em>
                 </li>
                 <li>
                     <a href="/marketingnews">营销动态</a>
+                    <em></em>
                 </li>
                 <li>
                     <a href="/contact">业务联系</a>
+                    <em></em>
                 </li>
             </ul>
         </div>
