@@ -16,21 +16,11 @@ load->view('/common/header.php'); ?>
 
                         <div class="hr"></div>
                     </li>
-                    <li>
-                        <a href="">华东地区</a>
-
-                        <div class="hr"></div>
-                    </li>
-                    <li>
-                        <a href="">华南地区</a>
-
-                        <div class="hr"></div>
-                    </li>
-                    <li>
-                        <a href="">海外地区</a>
-
-                        <div class="hr"></div>
-                    </li>
+                    <?php
+                        foreach ($area_list as $key => $value) {
+                            echo '<li><a href="/contact/'.$value['id'].'">'.$value['name'].'</a><div class="hr"></div></li>';
+                        }
+                    ?>
                 </ul>
                 <div class="telphone">
                     <div class="title">全国免费电话 :</div>
