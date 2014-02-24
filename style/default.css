@@ -68,3 +68,8 @@
 .main .icons-list-large{width:710px;margin:35px 0 0 30px}.main .icons-list-large .icons-list-item{border:1px solid #ccc}
 .main .imgblock-list{margin:35px 0 0}.main .imgblock-list .imgblock-list-item{float:left;width:145px;height:145px;border:5px solid #393;margin-left:30px;margin-bottom:45px}.main .imgblock-list .imgblock-list-item img{display:block;width:145px;height:145px}
 .main .imgblock-list .imgblock-list-item div{padding:5px;text-align:center}.main .imgblock-list .imgblock-list-item div a{font-family:"microsoft yahei";font-size:12px;color:#393}
+.main .nav-adcate{margin:35px 0 30px 25px}.main .nav-adcate li{float:left;height:26px;line-height:26px}.main .nav-adcate li a{font-size:15px;color:#ccc;margin:5px 32px}
+.main .nav-adcate li.active{background-color:#393;border-right:1px solid #393}.main .nav-adcate li.active a{color:#fff}
+.main .nav-adcate .spliter em{width:1px;height:15px;border-right:1px solid #ccc}
+.main .nav-adcate-detail{border-collapse:collapse;border:none;margin-bottom:11px;margin-left:25px}.main .nav-adcate-detail td{width:147px;height:135px;border:1px solid #ccc;text-align:center;font-size:12px;font-family:'microsoft yahei';color:#9c9c9c}.main .nav-adcate-detail td img{display:inline-block;width:146px;height:110px}
+.main .nav-adcate-desc{height:33px;line-height:33px;margin-left:25px;color:#9c9c9c}
