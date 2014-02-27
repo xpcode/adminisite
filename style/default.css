@@ -13,11 +13,14 @@
 .banner .rotate-btns li.active{background-color:#393}
 .bg_EDEEE8{background-color:#edeee8}
 .bg_F4A814{background-color:#f4a814}
+.bg_E6E6E6{background-color:#e6e6e6}
 .bg_grid{background:url(images/bg_grid.gif) repeat;padding-bottom:80px}
 .mb50{margin-bottom:50px}
 .mb112{margin-bottom:112px}
 .mt16px{margin-top:16px}
 .pl23{padding-left:23px}
+.h-auto-pb10{height:auto !important;padding-bottom:10px}
+.w-auto{width:auto !important}
 .container{width:1000px;margin:0 auto}.container ul,.container li{list-style-type:none}
 .container h1,.container h2,.container h3,.container h4{display:inline-block}
 .main .subnav{width:200px;height:1024px;border:1px solid #ccc}.main .subnav h2{display:block;margin:0 auto;background:url(images/bg_subnav_title.jpg) repeat-x;width:200px;height:70px;line-height:70px;font-size:24px;font-family:"黑体";color:#fff;text-align:center}
@@ -25,7 +28,7 @@
 .main .subnav ul,.main .subnav li{margin:0;padding:0}
 .main .subnav li{width:200px;height:47px;line-height:46px;font-size:12px;font-weight:bold}.main .subnav li a{color:#666;font-size:14px;margin-left:68px}
 .main .subnav li.active{background-color:#e6e6e6}.main .subnav li.active a{color:#393}
-.main .subnav li.active a:after{content:" <"}
+.main .subnav li.active a:after{content:" >"}
 .main .subnav .telphone{padding:30px 0 0 14px;font-size:16px;color:#359734}.main .subnav .telphone .numbers{font-size:26px;font-weight:bold;margin-top:15px}
 .main .content{width:770px;margin-left:28px}.main .content .non-border{border:0 !important}
 .main .content .more{background-color:#393;color:#fff}
@@ -69,12 +72,14 @@
 .main .qalist-group .qalistitem-title{padding-left:41px;color:#fff;height:36px;line-height:36px}
 .main .qalist-group .qalist{width:215px;float:left}
 .main .qalist-group .qalist-item{color:#999;height:33px;line-height:40px;padding-left:15px;font-size:13px}.main .qalist-group .qalist-item a{color:#999}
+.main .qalist-group .qalist-item2{color:#999;padding-left:15px;font-size:13px}.main .qalist-group .qalist-item2 div{height:auto}
 .main .qalist-group .ml25{margin-left:25px}
 .main .icons-list,.main .icons-list-large{width:686px}.main .icons-list .icons-list-item,.main .icons-list-large .icons-list-item,.main .icons-list img,.main .icons-list-large img{width:88px;height:43px}
 .main .icons-list .icons-list-item,.main .icons-list-large .icons-list-item{float:left;margin-right:10px;margin-bottom:10px}
 .main .icons-list-large{width:710px;margin:35px 0 0 30px}.main .icons-list-large .icons-list-item{border:1px solid #ccc}
 .main .imgblock-list{margin:35px 0 0}.main .imgblock-list .imgblock-list-item{float:left;width:145px;height:145px;border:5px solid #393;margin-left:30px;margin-bottom:45px}.main .imgblock-list .imgblock-list-item img{display:block;width:145px;height:145px}
 .main .imgblock-list .imgblock-list-item div{padding:5px;text-align:center}.main .imgblock-list .imgblock-list-item div a{font-family:"microsoft yahei";font-size:12px;color:#393}
+.main .imgblock-list .imgblock-list-item .img-title{padding:5px 0;color:#393}.main .imgblock-list .imgblock-list-item .img-title a{color:#989898}.main .imgblock-list .imgblock-list-item .img-title a em{background:url(/style/images/icon_btn_down.jpg) no-repeat;width:11px;height:12px;display:inline-block;margin-left:5px;vertical-align:middle}
 .main .nav-adcate{margin:35px 0 30px 25px}.main .nav-adcate li{float:left;height:26px;line-height:26px}.main .nav-adcate li a{font-size:15px;color:#ccc;margin:5px 32px}
 .main .nav-adcate li.active{background-color:#393;border-right:1px solid #393}.main .nav-adcate li.active a{color:#fff}
 .main .nav-adcate .spliter em{width:1px;height:15px;border-right:1px solid #ccc}
