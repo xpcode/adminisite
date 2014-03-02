@@ -1,6 +1,8 @@
-<?php 
+<?php
 
-class Contact extends CI_Controller {
+require_once('basic_controller.php');
+
+class Contact extends Basic_Controller {
 
 	function __construct() {
 		parent::__construct();

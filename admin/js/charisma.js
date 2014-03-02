@@ -151,14 +151,6 @@ function docReady(){
 	//popover
 	$('[rel="popover"],[data-rel="popover"]').popover();
 
-	//file manager
-	var elf = $('.file-manager').elfinder({
-		url : 'misc/elfinder-connector/connector.php'  // connector URL (REQUIRED)
-	}).elfinder('instance');
-
-	//iOS / iPhone style toggle switch
-	$('.iphone-toggle').iphoneStyle();
-
 	//star rating
 	$('.raty').raty({
 		score : 4 //default stars

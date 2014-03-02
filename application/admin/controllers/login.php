@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 class Login extends CI_Controller {
 
@@ -17,7 +17,7 @@ class Login extends CI_Controller {
 
 			$this->load->model('user_model');
 
-			$is_login = $this->user_model->login($userinfo["username"], $userinfo["password"]);
+			$is_login = $this->user_model->login($userinfo["username"], md5($userinfo["password"]));
 		}
 
 		if($is_login === TRUE){

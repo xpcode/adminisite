@@ -1,6 +1,8 @@
-<?php 
+<?php
 
-class Logout extends CI_Controller {
+require_once('basic_controller.php');
+
+class Logout extends Basic_Controller {
 
 	function __construct() {
 		parent::__construct();
