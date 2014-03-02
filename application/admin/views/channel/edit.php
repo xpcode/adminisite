@@ -46,16 +46,20 @@ if(!isset($channel)){
 						<div class="control-group">
 							<label for="focusedInput" class="control-label">频道名称</label>
 							<div class="controls">
-								<input type="text" name="name" value="<?= $channel['name'] ?>" required class="focused"></div>
+								<input type="text" name="name" value="<?= $channel['name'] ?>" required class="focused">
+								<span class="help-inline hide">请输入1-32个字</span>
+							</div>
 						</div>
 						<div class="control-group">
 							<label for="focusedInput" class="control-label">频道顺序</label>
 							<div class="controls">
-								<input type="text" name="chorder" value="<?= $channel['chorder'] ?>" required class="focused"></div>
+								<input type="text" name="chorder" value="<?= $channel['chorder'] ?>" required class="focused">
+								<span class="help-inline hide">请输入数字</span>
+							</div>
 						</div>
 						<div class="form-actions">
 							<button class="btn btn-primary" type="submit">保存</button>
-							<a class="btn" href="javascript:history.back()v;">取消</a>
+							<a class="btn" href="javascript:history.back();">取消</a>
 						</div>
 					</fieldset>
 				</form>

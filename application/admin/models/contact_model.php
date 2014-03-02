@@ -1,6 +1,6 @@
 <?php 
 
-require('crm_model.php');
+require_once('crm_model.php');
 
 class Contact_model extends CRM_model {
 

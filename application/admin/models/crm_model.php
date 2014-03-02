@@ -93,10 +93,10 @@ class CRM_model extends CI_Model {
                  ->from($this->_table)
                  ->order_by($this->_primary, $order)
                  ->limit($limit, $offset);
+       
+        $query = $this->db->get()->result_object();
 
-        $query = $this->db->get();
-
-        return $this->object_2_array($query->result_object());
+        return $this->object_2_array($query);
     }
 
     public function count($param=array(), $order='DESC', $offset=null, $limit=null) 

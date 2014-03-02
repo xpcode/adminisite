@@ -95,32 +95,30 @@
 							</a>
 						</li>
 						<li>
-							<a class="ajax-link" href="product">
+							<a class="ajax-link" href="/admin/product">
 								<i class="icon-eye-open"></i>
 								<span class="hidden-tablet">产品服务</span>
 							</a>
 						</li>
 						<li>
-							<a class="ajax-link" href="chart.html">
+							<a class="ajax-link" href="/admin/case">
 								<i class="icon-list-alt"></i>
 								<span class="hidden-tablet">案例展示</span>
 							</a>
 						</li>
 						<li>
-							<a href="tour.html">
+							<a class="ajax-link" href="/admin/new">
 								<i class="icon-globe"></i>
 								<span class="hidden-tablet">营销动态</span>
 							</a>
 						</li>
 						<li>
-							<a class="ajax-link" href="table.html">
+							<a class="ajax-link" href="/admin/contact">
 								<i class="icon-align-justify"></i>
 								<span class="hidden-tablet">业务联系</span>
 							</a>
 						</li>
 					</ul>
-					<label id="for-is-ajax" class="hidden-tablet" for="is-ajax">
-						<input id="is-ajax" type="checkbox">Ajax on menu</label>
 				</div>
 				<!--/.well -->
 			</div>
