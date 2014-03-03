@@ -14,4 +14,18 @@ CKEDITOR.editorConfig = function(config) {
 	config.filebrowserUploadUrl = '/script/noncmd-lib/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=File';
 	config.filebrowserImageUploadUrl = '/script/noncmd-lib/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Images';
 	config.filebrowserFlashUploadUrl = '/script/noncmd-lib/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Flash';
+
+	config.toolbar_Full = [
+		['Source', '-', 'Save', 'NewPage', 'Preview', '-', 'Templates'],
+		['Cut', 'Copy', 'Paste', 'PasteText', 'PasteFromWord', '-', 'Print', 'SpellChecker', 'Scayt'],
+		['Undo', 'Redo', '-', 'Find', 'Replace', '-', 'SelectAll', 'RemoveFormat'],
+		['Form', 'Checkbox', 'Radio', 'TextField', 'Textarea', 'Select', 'Button', 'ImageButton', 'HiddenField'],
+		'/', ['Bold', 'Italic', 'Underline', 'Strike', '-', 'Subscript', 'Superscript'],
+		['NumberedList', 'BulletedList', '-', 'Outdent', 'Indent', 'Blockquote'],
+		['JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock'],
+		['Link', 'Unlink', 'Anchor'],
+		['Image', 'Flash', 'Table', 'HorizontalRule', 'Smiley', 'SpecialChar', 'PageBreak'],
+		'/', ['Styles', 'Format', 'Font', 'FontSize'],
+		['TextColor', 'BGColor']
+	];
 };

@@ -1,7 +1,13 @@
 <?php $this->
 load->view('/common/header.php'); ?>
 
-<script>JS_PATH = 'article/edit';</script>
+<?php
+if(!isset($article)){
+	$article = array('id'=>0, 'channel_id'=>0, 'title'=>'', 'img'=>'', 'intro'=>'', 'content'=>'');
+}
+?>
+
+<script>JS_PATH='article/edit';</script>
 
 <div class="span10" id="content">
 	<!-- content starts -->
@@ -9,11 +15,11 @@ load->view('/common/header.php'); ?>
 	<div>
 		<ul class="breadcrumb">
 			<li>
-				<a href="/admin/main">频道管理</a>
+				<a href="/admin/product">文章管理</a>
 				<span class="divider">/</span>
 			</li>
 			<li>
-				添加子频道
+				添加文章
 			</li>
 		</ul>
 	</div>
@@ -27,43 +33,52 @@ load->view('/common/header.php'); ?>
 				</h2>
 			</div>
 			<div class="box-content">
-				<form method="post" action="add" class="form-horizontal">
+				<form method="post" action="add" enctype="multipart/form-data" class="form-horizontal">
 					<fieldset>
+						<div class="control-group">
+							<label for="selectError3" class="control-label">所属频道</label>
+							<div class="controls">
+							    <select name="channel_id">
+							    	<option value="0">请选择频道</option>
+									<?php foreach ($channels as $key => $value): ?>
+									<option value="<?= $value['id'] ?>" <?= $value['id']==$article['channel_id'] ? 'selected="selected"' : "" ?>><?= $value['name'] ?></option>
+									<?php endforeach ?>
+							    </select>
+								<span class="help-inline hide">请选择所属频道</span>
+							</div>
+						</div>
 						<div class="control-group">
 							<label class="control-label" for="selectError3">标题</label>
 							<div class="controls">
-								<input type="text" class="focused" required name="name">
+								<input type="hidden" name="id" class="disabled" value="<?= $article['id'] ?>">
+								<input type="text" class="focused" required name="title">
 								<span class="help-inline hide">请输入1-50字</span>
-							</div>
-						</div>
-						<div class="controls">
-							<div id="uniform-undefined" class="uploader">
-								<input type="file" style="opacity: 0;" size="19">
-								<span style="-moz-user-select: none;" class="filename">No file selected</span>
-								<span style="-moz-user-select: none;" class="action">Choose File</span>
 							</div>
 						</div>
 						<div class="control-group">
 							<label class="control-label" for="selectError3">简图</label>
 							<div class="controls">
-								<div id="uniform-undefined" class="uploader">
+								<div id="uniform-undefined" class="uploader" style="width:auto;">
 									<input name="img" type="file" style="opacity: 0;" size="19">
-									<span class="filename">请选择文件</span>
+									<span class="filename">未选择</span>
 									<span class="action">选择文件</span>
 								</div>
+								<?php if(isset($upload_msg)): ?>
+								<span class="help-inline">您上传的图片不符合要求（小于2MB的图片）</span>
+								<?php endif ?>
 							</div>
 						</div>
 						<div class="control-group">
 							<label class="control-label" for="selectError3">简介</label>
 							<div class="controls">
-								<textarea id="txtintro" cols="20" rows="2" class="ckeditor"></textarea>
+								<textarea id="txtintro" cols="20" rows="2"></textarea>
 								<span class="help-inline hide">请输入1-50字</span>
 							</div>
 						</div>
 						<div class="control-group">
 							<label class="control-label" for="selectError3">内容</label>
 							<div class="controls">
-								<textarea id="txtcontent" cols="20" rows="2" class="ckeditor"></textarea>
+								<textarea id="txtcontent" cols="20" rows="2"></textarea>
 								<span class="help-inline hide">请输入1-50字</span>
 							</div>
 						</div>

@@ -6,6 +6,8 @@ class Contact extends Basic_Controller {
 
 	function __construct() {
 		parent::__construct();
+
+		$this->channel_code='contact';
 	}
 
 	public function index($channel_id=0, $cur_page=1)
@@ -39,8 +41,10 @@ class Contact extends Basic_Controller {
 		$this->load->view('contact/manage', $data);
 	}
 
-	public function add($channel_id=5)
+	public function add()
 	{
+		$channel=$this->get_channelid_bycode($this->channel_code);
+
 		if(!empty($_POST)){
 			$this->load->helper('array');
 
@@ -61,13 +65,15 @@ class Contact extends Basic_Controller {
 		$data["action"] = 'add';
 		
 		$this->load->model('channel_model');
-		$data["channels"] = $this->channel_model->get_by(array('pid'=>$channel_id));
+		$data["channels"] = $this->channel_model->get_by(array('pid'=>$channel['id']));
 
 		$this->load->view('contact/edit', $data);
 	}
 
 	public function update($id)
 	{
+		$channel=$this->get_channelid_bycode($this->channel_code);
+
 		$this->load->model('contact_model');
 
 		if(!empty($_POST)){
@@ -90,7 +96,7 @@ class Contact extends Basic_Controller {
 		$data["contact"] = $this->contact_model->get_byid($id);
 		
 		$this->load->model('channel_model');
-		$data["channels"] = $this->channel_model->get_by(array('pid'=>5));
+		$data["channels"] = $this->channel_model->get_by(array('pid'=>$channel['id']));
 
 		$this->load->view('contact/edit', $data);
 	}

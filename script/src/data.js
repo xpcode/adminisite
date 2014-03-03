@@ -25,6 +25,10 @@ define(function(require) {
 			return this.post('/admin/channel/add', data);
 		},
 
+		add_product: function(data) {
+			return this.post('/admin/product/add', data);
+		},
+
 
 
 		/**

@@ -3,6 +3,7 @@
 class Basic_Controller extends CI_Controller {
 
 	protected $userinfo;
+	protected $channel_code;
 
 	function __construct() {
 		parent::__construct();
@@ -53,5 +54,30 @@ class Basic_Controller extends CI_Controller {
 			);
 
 		return $channels[$channel_code];
+	}
+
+	protected function do_upload($field_name=NULL)
+	{
+		$config['upload_path'] = realpath(BASEPATH.'/upload/');
+		$config['allowed_types'] = 'gif|jpg|png';
+		$config['max_size'] = '2000';
+		$config['encrypt_name'] = TRUE;
+
+		$this->load->library('upload', $config);
+
+		$result = array();
+
+		if ($this->upload->do_upload($field_name))
+		{
+			$result['status'] = 'success';
+			$result['msg'] = $this->upload->data();
+		} 
+		else
+		{
+			$result['status'] = 'error';
+			$result['msg'] = $this->upload->display_errors();
+		}
+
+		return $result;
 	}
 }

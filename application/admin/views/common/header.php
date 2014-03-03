@@ -19,6 +19,7 @@
 	</style>
 	<link href="/admin/css/bootstrap-responsive.css" rel="stylesheet">
 	<link href="/admin/css/charisma-app.css" rel="stylesheet">
+	<link href="/admin/css/uniform.default.css" rel="stylesheet">
 
 	<!-- The HTML5 shim, for IE6-8 support of HTML5 elements -->
 	<!--[if lt IE 9]>
