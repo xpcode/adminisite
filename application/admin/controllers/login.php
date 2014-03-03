@@ -9,6 +9,7 @@ class Login extends CI_Controller {
 	public function index()
 	{
 		$is_login = FALSE;
+		$data = array();
 
 		if(!empty($_POST)){
 			$this->load->helper('array');
@@ -17,7 +18,9 @@ class Login extends CI_Controller {
 
 			$this->load->model('user_model');
 
-			$is_login = $this->user_model->login($userinfo["username"], md5($userinfo["password"]));
+			$is_login = $this->user_model->get_password($userinfo["username"]) == md5($userinfo["password"]);
+
+			$data['login'] = TRUE;
 		}
 
 		if($is_login === TRUE){
@@ -29,7 +32,7 @@ class Login extends CI_Controller {
 
 			header('Location: main');
 		} else {
-			$this->load->view('login');
+			$this->load->view('login', $data);
 		}
 	}
 }

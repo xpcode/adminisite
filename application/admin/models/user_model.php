@@ -12,30 +12,21 @@ class User_model extends CRM_model {
 	}
 
 	public function get_password($username){
-		$sql = "SELECT password FROM user WHERE username='".$username."' LIMIT 1";
-		$this->load->database();
-		$query = $this->db->query($sql);
-		$row = $query->row();
+		$user = $this->get_userinfo($username);
 
-		return $row->password;
+		if(!empty($user)){
+			return $user['password'];
+		}
+
+		return FALSE;
 	}
 
 	public function get_userinfo($username){
-		$sql = "SELECT id, username FROM user WHERE username='".$username."' LIMIT 1";
-		$this->load->database();
-		$query = $this->db->query($sql);
-		$row = $query->row();
+		$users = $this->user_model->get_by(array('username'=>$username));
 
-		return array(
-			"id"=>$row->id,
-			"username"=>$row->username,
-			"lastlogin"=>$row->lastlogin
-			);
-	}
-
-	public function login($username, $password){
-		$password_rlt = $this->get_password($username);
-
-		return $password_rlt == $password;
+		if(!empty($users)){
+			return $users[0];
+		}
+		return FALSE;
 	}
 }

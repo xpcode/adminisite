@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>Free HTML5 Bootstrap Admin Template</title>
+	<title>欢迎登录后台管理系统</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="description" content="Charisma, a fully featured, responsive, HTML5, Bootstrap admin template.">
 	<meta name="author" content="Muhammad Usman">
@@ -19,20 +19,6 @@
 	</style>
 	<link href="css/bootstrap-responsive.css" rel="stylesheet">
 	<link href="css/charisma-app.css" rel="stylesheet">
-	<link href="css/jquery-ui-1.8.21.custom.css" rel="stylesheet">
-	<link href='css/fullcalendar.css' rel='stylesheet'>
-	<link href='css/fullcalendar.print.css' rel='stylesheet'  media='print'>
-	<link href='css/chosen.css' rel='stylesheet'>
-	<link href='css/uniform.default.css' rel='stylesheet'>
-	<link href='css/colorbox.css' rel='stylesheet'>
-	<link href='css/jquery.cleditor.css' rel='stylesheet'>
-	<link href='css/jquery.noty.css' rel='stylesheet'>
-	<link href='css/noty_theme_default.css' rel='stylesheet'>
-	<link href='css/elfinder.min.css' rel='stylesheet'>
-	<link href='css/elfinder.theme.css' rel='stylesheet'>
-	<link href='css/jquery.iphone.toggle.css' rel='stylesheet'>
-	<link href='css/opa-icons.css' rel='stylesheet'>
-	<link href='css/uploadify.css' rel='stylesheet'>
 
 	<!-- The HTML5 shim, for IE6-8 support of HTML5 elements -->
 	<!--[if lt IE 9]>
@@ -41,11 +27,18 @@
 
 	<!-- The fav icon -->
 	<link rel="shortcut icon" href="img/favicon.ico">
+
+	<script src="/script/sea-modules/seajs/seajs/2.1.1/sea.js"></script>
+	<script>
+	seajs.use('/script/src/1.0.js');
+	</script>
 		
 </head>
 
 <body>
-		<div class="container-fluid">
+	<script>JS_PATH = 'login';</script>
+
+	<div class="container-fluid">
 		<div class="row-fluid">
 		
 			<div class="row-fluid">
@@ -57,17 +50,21 @@
 			<div class="row-fluid">
 				<div class="well span5 center login-box">
 					<div class="alert alert-info">
+						<?php if(isset($login)): ?>
+						<span style="color:red">请输入正确的用户名和密码登录！</span>
+						<?php else: ?>
 						请输入用户名和密码。
+						<?php endif ?>
 					</div>
 					<form class="form-horizontal" action="login" method="post">
 						<fieldset>
 							<div class="input-prepend" title="用户名" data-rel="tooltip">
-								<span class="add-on"><i class="icon-user"></i></span><input autofocus class="input-large span10" name="username" id="username" type="text" value="admin" />
+								<span class="add-on"><i class="icon-user"></i></span><input autofocus class="input-large span10" name="username" id="username" type="text" />
 							</div>
 							<div class="clearfix"></div>
 
 							<div class="input-prepend" title="密码" data-rel="tooltip">
-								<span class="add-on"><i class="icon-lock"></i></span><input class="input-large span10" name="password" id="password" type="password" value="admin123456" />
+								<span class="add-on"><i class="icon-lock"></i></span><input class="input-large span10" name="password" id="password" type="password" />
 							</div>
 							<div class="clearfix"></div>
 
@@ -83,26 +80,9 @@
 					</form>
 				</div><!--/span-->
 			</div><!--/row-->
-				</div><!--/fluid-row-->
+		</div><!--/fluid-row-->
 		
 	</div><!--/.fluid-container-->
-
-	<!-- external javascript
-	================================================== -->
-	<!-- Placed at the end of the document so the pages load faster -->
-
-	<!-- jQuery -->
-	<script src="js/jquery-1.7.2.min.js"></script>
-	<!-- jQuery UI -->
-	<script src="js/jquery-ui-1.8.21.custom.min.js"></script>
-	<!-- transition / effect library -->
-	<script src="js/bootstrap-transition.js"></script>
-	<!-- alert enhancer library -->
-	<script src="js/bootstrap-alert.js"></script>
-	<!-- button enhancer library -->
-	<script src="js/bootstrap-button.js"></script>
-	<!-- library for cookie management -->
-	<script src="js/jquery.cookie.js"></script>
 		
 </body>
 </html>

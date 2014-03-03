@@ -87,13 +87,13 @@
 							</a>
 						</li>
 						<li>
-							<a class="ajax-link" href="/admin/case">
+							<a class="ajax-link" href="/admin/mcase">
 								<i class="icon-list-alt"></i>
 								<span class="hidden-tablet">案例展示</span>
 							</a>
 						</li>
 						<li>
-							<a class="ajax-link" href="/admin/new">
+							<a class="ajax-link" href="/admin/mnew">
 								<i class="icon-globe"></i>
 								<span class="hidden-tablet">营销动态</span>
 							</a>

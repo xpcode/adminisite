@@ -20,7 +20,7 @@ class Product extends Basic_Controller {
 	{
 		$data["userinfo"] = $this->userinfo;
 
-		$this->load->view('product/edit', $data);
+		$this->load->view('article/edit', $data);
 	}
 
 	public function edit($id)

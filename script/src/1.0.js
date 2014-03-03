@@ -13,6 +13,8 @@ define(function(require, exports, module) {
 			'placeholders': 'sea-modules/gallery/placeholders/2.1.0/placeholders',
 			'handlebars': 'sea-modules/gallery/handlebars/1.0.2/handlebars',
 
+			'ckeditor': 'sea-modules/gallery2/ckeditor/4.2.1/ckeditor',
+
 			'base': 'sea-modules/arale/base/1.1.1/base',
 			'cookie': 'sea-modules/arale/cookie/1.0.2/cookie',
 			'position': 'sea-modules/arale/position/1.0.1/position',
@@ -32,11 +34,13 @@ define(function(require, exports, module) {
 		]
 	});
 
-	$(function() {
-		if (JS_PATH) {
-			seajs.use('/script/src/' + JS_PATH.toLowerCase(), function(Page) {
-				new Page();
-			});
-		}
+	require.async('$', function($) {
+		$(function() {
+			if (JS_PATH) {
+				seajs.use('/script/src/' + JS_PATH.toLowerCase(), function(Page) {
+					new Page();
+				});
+			}
+		});
 	});
 });
