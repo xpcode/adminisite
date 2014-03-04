@@ -10,7 +10,7 @@ load->view('/common/header.php'); ?>
 		<ul class="breadcrumb clearfix">
 			<li>所属频道：</li>
 			<li>
-				<?php if($cur_channel_id == 0): ?>
+				<?php if($cur_channel['id'] == 0): ?>
 				<strong>所有频道</strong>
 				<?php else: ?>
 				<a href="/admin/contact">所有频道</a>
@@ -19,7 +19,7 @@ load->view('/common/header.php'); ?>
 			<?php foreach ($channels as $key => $value): ?>
 			<li>
 				<span class="divider">|</span>
-				<?php if($cur_channel_id == $value['id']): ?>
+				<?php if($cur_channel['id'] == $value['id']): ?>
 				<strong><?= $value['name'] ?></strong>
 				<?php else: ?>
 				<a href="/admin/contact/index/<?= $value['id'] ?>"><?= $value['name'] ?></a>
@@ -28,6 +28,8 @@ load->view('/common/header.php'); ?>
 			<?php endforeach ?>
 		</ul>
 	</div>
+
+	<?php $this->load->view('/pic/banner.php'); ?>
 
 	<div class="row-fluid sortable ui-sortable">
 		<div class="box span12">

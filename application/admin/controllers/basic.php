@@ -44,19 +44,7 @@ class Basic_Controller extends CI_Controller {
 		$this->load->view('common/footer');
 	}
 
-	protected function get_channelid_bycode($channel_code){
-		$channels = array(
-			'homepage'=>array('id'=>1, 'name'=>'首页', 'url'=>'/admin/main'),
-			'product'=>array('id'=>2, 'name'=>'产品服务', 'url'=>'/admin/product'),
-			'case'=>array('id'=>3, 'name'=>'案例展示', 'url'=>'/admin/case'),
-			'new'=>array('id'=>4, 'name'=>'营销动态', 'url'=>'/admin/new'),
-			'contact'=>array('id'=>5, 'name'=>'业务联系', 'url'=>'/admin/contact')
-			);
-
-		return $channels[$channel_code];
-	}
-
-	function recursive_mkdir($path, $mode = 0777) {
+	private function recursive_mkdir($path, $mode = 0777) {
 	    $dirs = explode(DIRECTORY_SEPARATOR , $path);
 	    $count = count($dirs);
 	    $path = '.';
@@ -69,6 +57,18 @@ class Basic_Controller extends CI_Controller {
 	        }
 	    }
 	    return true;
+	}
+
+	protected function get_channelid_bycode($channel_code){
+		$channels = array(
+			'homepage'=>array('id'=>1, 'name'=>'首页', 'url'=>'/admin/main'),
+			'product'=>array('id'=>2, 'name'=>'产品服务', 'url'=>'/admin/product'),
+			'case'=>array('id'=>3, 'name'=>'案例展示', 'url'=>'/admin/case'),
+			'new'=>array('id'=>4, 'name'=>'营销动态', 'url'=>'/admin/new'),
+			'contact'=>array('id'=>5, 'name'=>'业务联系', 'url'=>'/admin/contact')
+			);
+
+		return $channels[$channel_code];
 	}
 
 	protected function do_upload($field_name=NULL, $allowed_types='gif|jpg|png')
@@ -102,5 +102,13 @@ class Basic_Controller extends CI_Controller {
 		}
 
 		return $result;
+	}
+
+	protected function get_banner(){
+		$channel = $this->get_channelid_bycode($this->channel_code);
+
+		$this->load->model('pic_model');
+
+		return $this->pic_model->getbanner_bychannelid($channel['id']);
 	}
 }

@@ -14,6 +14,8 @@ class Mnew extends Basic_article {
 	{
 		$data = $this->get_viewdata_4list($channel_id, $cur_page);
 
+		$data['banner'] = $this->get_banner();
+
 		$this->load->view($this->channel_code.'/manage', $data);
 	}
 

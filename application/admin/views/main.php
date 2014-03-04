@@ -26,6 +26,8 @@ load->view('/common/header.php'); ?>
 		</div>
 	</div>
 
+	<?php $this->load->view('/pic/banner.php'); ?>
+
 	<div class="row-fluid sortable ui-sortable">
 		<div class="box span12">
 			<div data-original-title="" class="box-header well">

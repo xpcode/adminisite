@@ -36,7 +36,11 @@ class Contact extends Basic_Controller {
 
 		$data["contacts"] = $this->contact_model->get_bycolumn($param, 'ASC', ($cur_page-1)*$config['per_page'], $config['per_page']);
 		$data["channels"] = $this->channel_model->get_by(array('pid'=>5));
-		$data['cur_channel_id'] = $channel_id;
+		$data['cur_channel'] = array(
+			'id'=>$channel_id,
+			'code'=>$this->channel_code
+			);
+		$data['banner'] = $this->get_banner();
 
 		$this->load->view('contact/manage', $data);
 	}

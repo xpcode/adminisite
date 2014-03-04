@@ -22,7 +22,7 @@ class User_model extends CRM_model {
 	}
 
 	public function get_userinfo($username){
-		$users = $this->user_model->get_by(array('username'=>$username));
+		$users = $this->get_by(array('username'=>$username));
 
 		if(!empty($users)){
 			return $users[0];

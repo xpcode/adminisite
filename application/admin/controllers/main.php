@@ -6,6 +6,8 @@ class Main extends Basic_Controller {
 
 	function __construct() {
 		parent::__construct();
+
+		$this->channel_code = 'homepage';
 	}
 
 	public function index($pid=0, $cur_page=1)
@@ -34,6 +36,13 @@ class Main extends Basic_Controller {
 		$data["channels"] = $this->channel_model->get_bycolumn($param, 'ASC', ($cur_page-1)*$config['per_page'], $config['per_page']);
 
 		$data['pid'] = $pid;
+
+		$data['banner'] = $this->get_banner();
+
+		$data['cur_channel'] = array(
+			'id'=>1,
+			'code'=>$this->channel_code
+			);
 
 		$this->load->view('main', $data);
 	}
