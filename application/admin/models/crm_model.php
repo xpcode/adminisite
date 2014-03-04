@@ -34,11 +34,10 @@ class CRM_model extends CI_Model {
 
        $rows = $this->db->affected_rows();
        
-       if($rows>0){
-           return $rows;
-       } else{
-           return FALSE;
-       }
+        if($rows>0){
+            return $rows;
+        }
+        return array();
     }
     
     /**
@@ -61,9 +60,8 @@ class CRM_model extends CI_Model {
 
         if($query->num_rows()>0){
             return $query->result_array()[0];
-        } else{
-            return FALSE;
         }
+        return array();
     }
     
     /**
@@ -75,7 +73,7 @@ class CRM_model extends CI_Model {
     public function get_all($limit=null, $offset=null){
         $result = $this->db ->get($this->_table, $limit, $offset) ->result_array();
 
-        return empty($result) ? FALSE : $result;
+        return empty($result) ? array() : $result;
     }
     
     /**

@@ -56,10 +56,33 @@ class Basic_Controller extends CI_Controller {
 		return $channels[$channel_code];
 	}
 
-	protected function do_upload($field_name=NULL)
+	function recursive_mkdir($path, $mode = 0777) {
+	    $dirs = explode(DIRECTORY_SEPARATOR , $path);
+	    $count = count($dirs);
+	    $path = '.';
+
+	    for ($i = 0; $i < $count; ++$i) {
+	        $path .= DIRECTORY_SEPARATOR . $dirs[$i];
+
+	        if (!is_dir($path) && !mkdir($path, $mode)) {
+	            return false;
+	        }
+	    }
+	    return true;
+	}
+
+	protected function do_upload($field_name=NULL, $allowed_types='gif|jpg|png')
 	{
-		$config['upload_path'] = realpath(BASEPATH.'/upload/');
-		$config['allowed_types'] = 'gif|jpg|png';
+		$path = '..\\upload\\'.date("Y").'\\'.date("m");
+
+		if(!realpath($path)){
+			if($this->recursive_mkdir($path)){
+				$path = realpath($path);
+			}
+		}
+
+		$config['upload_path'] = $path;
+		$config['allowed_types'] = $allowed_types;
 		$config['max_size'] = '2000';
 		$config['encrypt_name'] = TRUE;
 

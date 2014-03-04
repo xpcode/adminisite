@@ -1,16 +1,16 @@
 define(function(require, exports, module) {
 
 	var $ = require('$');
-	var Validator = require('validator');
 	var BasePage = require('base');
+	var ArticleList = require('../article/list');
 
 	var Page = BasePage.extend({
+		Implements: ArticleList,
+
 		initialize: function() {
 			Page.superclass.initialize.call(this);
 
-			$('a[data-action="delete"]').on('click', function(){
-				return confirm('确实要删除吗?');
-			});
+			this.bindDeleteEvent();
 		}
 	});
 

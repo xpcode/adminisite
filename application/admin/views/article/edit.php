@@ -40,8 +40,8 @@ if(!isset($article)){
 							<div class="controls">
 							    <select name="channel_id">
 							    	<option value="0">请选择频道</option>
-									<?php foreach ($channels as $key => $value): ?>
-									<option value="<?= $value['id'] ?>" <?= $value['id']==$article['channel_id'] ? 'selected="selected"' : "" ?>><?= $value['name'] ?></option>
+									<?php foreach ($channels as $val): ?>
+									<option value="<?= $val['id'] ?>" <?= $val['id']==$article['channel_id'] ? 'selected="selected"' : "" ?>><?= $val['name'] ?></option>
 									<?php endforeach ?>
 							    </select>
 								<span class="help-inline hide">请选择所属频道</span>
@@ -51,7 +51,7 @@ if(!isset($article)){
 							<label class="control-label" for="selectError3">标题</label>
 							<div class="controls">
 								<input type="hidden" name="id" class="disabled" value="<?= $article['id'] ?>">
-								<input type="text" class="focused" required name="title">
+								<input type="text" value="<?= $article['title'] ?>" class="focused" required name="title">
 								<span class="help-inline hide">请输入1-50字</span>
 							</div>
 						</div>
@@ -63,6 +63,7 @@ if(!isset($article)){
 									<span class="filename">未选择</span>
 									<span class="action">选择文件</span>
 								</div>
+								<span class="help-inline hide">只可以上传图片文件</span>
 								<?php if(isset($upload_msg)): ?>
 								<span class="help-inline">您上传的图片不符合要求（小于2MB的图片）</span>
 								<?php endif ?>
@@ -71,14 +72,14 @@ if(!isset($article)){
 						<div class="control-group">
 							<label class="control-label" for="selectError3">简介</label>
 							<div class="controls">
-								<textarea id="txtintro" cols="20" rows="2"></textarea>
+								<textarea id="txtintro" name="intro" value="<?= $article['intro'] ?>"></textarea>
 								<span class="help-inline hide">请输入1-50字</span>
 							</div>
 						</div>
 						<div class="control-group">
 							<label class="control-label" for="selectError3">内容</label>
 							<div class="controls">
-								<textarea id="txtcontent" cols="20" rows="2"></textarea>
+								<textarea id="txtcontent" name="content" value="<?= $article['content'] ?>"></textarea>
 								<span class="help-inline hide">请输入1-50字</span>
 							</div>
 						</div>

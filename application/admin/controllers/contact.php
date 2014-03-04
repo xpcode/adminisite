@@ -1,6 +1,6 @@
 <?php
 
-require_once('basic_controller.php');
+require_once('basic.php');
 
 class Contact extends Basic_Controller {
 

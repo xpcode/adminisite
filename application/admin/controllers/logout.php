@@ -1,6 +1,6 @@
 <?php
 
-require_once('basic_controller.php');
+require_once('basic.php');
 
 class Logout extends Basic_Controller {
 
@@ -14,6 +14,6 @@ class Logout extends Basic_Controller {
 
 		$this->session->unset_userdata('userinfo');
 
-		header('Location: login');
+		header('Location: /admin/login');
 	}
 }

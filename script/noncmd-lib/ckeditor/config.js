@@ -15,9 +15,10 @@ CKEDITOR.editorConfig = function(config) {
 	config.filebrowserImageUploadUrl = '/script/noncmd-lib/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Images';
 	config.filebrowserFlashUploadUrl = '/script/noncmd-lib/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Flash';
 
+	config.toolbar = 'Full';
 	config.toolbar_Full = [
-		['Source', '-', 'Save', 'NewPage', 'Preview', '-', 'Templates'],
-		['Cut', 'Copy', 'Paste', 'PasteText', 'PasteFromWord', '-', 'Print', 'SpellChecker', 'Scayt'],
+		['Source', 'Preview', 'Templates'],
+		['Cut', 'Copy', 'Paste', 'PasteText', 'PasteFromWord'],
 		['Undo', 'Redo', '-', 'Find', 'Replace', '-', 'SelectAll', 'RemoveFormat'],
 		['Form', 'Checkbox', 'Radio', 'TextField', 'Textarea', 'Select', 'Button', 'ImageButton', 'HiddenField'],
 		'/', ['Bold', 'Italic', 'Underline', 'Strike', '-', 'Subscript', 'Superscript'],
@@ -28,4 +29,7 @@ CKEDITOR.editorConfig = function(config) {
 		'/', ['Styles', 'Format', 'Font', 'FontSize'],
 		['TextColor', 'BGColor']
 	];
+
+	config.width = 800;
+	config.height = 300;
 };
