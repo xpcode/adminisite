@@ -14,7 +14,7 @@
 			<?php if($cur_channel['id'] == $val['id']): ?>
 			<strong><?= $val['name'] ?></strong>
 			<?php else: ?>
-			<a href="/admin/product/index/<?= $val['id'] ?>"><?= $val['name'] ?></a>
+			<a href="/admin/<?=$cur_channel['code']?>/index/<?= $val['id'] ?>"><?= $val['name'] ?></a>
 			<?php endif ?>
 		</li>
 		<?php endforeach ?>

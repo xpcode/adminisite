@@ -7,7 +7,7 @@ class Mnew extends Basic_article {
 	function __construct() {
 		parent::__construct();
 
-		$this->channel_code = 'new';
+		$this->channel_code = 'mnew';
 	}
 
 	function index($channel_id=NULL, $cur_page=1)

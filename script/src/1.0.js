@@ -19,6 +19,7 @@ define(function(require, exports, module) {
 			'cookie': 'sea-modules/arale/cookie/1.0.2/cookie',
 			'position': 'sea-modules/arale/position/1.0.1/position',
 			'validator': 'sea-modules/arale/validator/0.9.7/validator',
+			'easing': 'sea-modules/arale/easing/1.0.0/easing',
 
 			'ajaxform': 'sea-modules/jquery-plugin/form/3.44.0/form',
 			'seajs-log': 'sea-modules/seajs/seajs-log/1.0.1/seajs-log'

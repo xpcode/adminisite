@@ -8,6 +8,7 @@ class Basic_article extends Basic_Controller {
 		parent::__construct();
 
 		$this->load->model('article_model');
+		$this->load->model('pic_model');
 		$this->load->model('channel_model');
 	}
 
@@ -43,10 +44,9 @@ class Basic_article extends Basic_Controller {
 		$data['pagination'] = $this->pagination->create_links();
 		$data["articles"] = $articles;
 		$data["channels"] = $this->channel_model->get_by(array('pid'=>$channel['id']));
-		$data['cur_channel'] = array(
-			'id'=>$channel_id,
-			'code'=>$this->channel_code
-			);
+		$data["pics"] = $this->pic_model->get_by(array('channel_id'=>$channel_id));
+		$data['cur_channel'] = $this->channel_model->get_byid($channel_id);
+		$data['cur_channel']['code']=$this->channel_code;
 
 		return $data;
 	}
@@ -130,5 +130,14 @@ class Basic_article extends Basic_Controller {
 		$this->article_model->del_byid($id);
 
 		header('Location: /admin/'.$this->channel_code.'/index/'.$article['channel_id']);
+	}
+
+	public function recommend($id){
+		$article = $this->article_model->get_byid($id);
+		$article['recommend']=$article['recommend']==0 ? 1 : 0;
+
+		$this->article_model->update($id, $article);
+		
+		header("Location: ".$_SERVER['HTTP_REFERER']);
 	}
 }

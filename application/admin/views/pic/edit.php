@@ -15,7 +15,7 @@ if(!isset($pic)){
 		<ul class="breadcrumb">
 			<li>
 				<?php if($itype==1): ?>
-				<a href="/admin/pic">图片管理</a>
+				<?= $cur_channel['name'] ?>
 				<?php else: ?>
 				<a href="javascript:history.back();"><?= $cur_channel['name'] ?></a>
 				<?php endif ?>
@@ -36,7 +36,7 @@ if(!isset($pic)){
 				</h2>
 			</div>
 			<div class="box-content">
-				<form method="post" action="/admin/pic/add/<?= $cur_channel['code'] ?>/<?= $itype ?>" enctype="multipart/form-data" class="form-horizontal">
+				<form method="post" action="/admin/pic/add/<?= $cur_channel['code'] ?>/<?= $itype ?>/<?= $cur_channel['id'] ?>" enctype="multipart/form-data" class="form-horizontal">
 					<fieldset>
 						<div class="control-group hide">
 							<label for="selectError3" class="control-label">图片类型</label>

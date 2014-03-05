@@ -96,6 +96,8 @@ load->view('/common/header.php'); ?>
 		<!--/span-->
 
 	</div>
+	
+	<?php $this->load->view('/article/manage.php'); ?>
 
 	<!-- content ends -->
 </div>

@@ -16,9 +16,9 @@ class Pic extends Basic_Controller {
 		$this->load->view($this->channel_code.'/manage', $data);
 	}
 
-	function add($channel_code, $itype)
+	function add($channel_code, $itype, $channel_id=NULL)
 	{
-		if($channel_code == 'homepage'){
+		if($channel_code == 'main'){
 			$this->sethomepagebanner();
 			return FALSE;
 		}
@@ -30,6 +30,10 @@ class Pic extends Basic_Controller {
 			$this->load->helper('array');
 
 			$picinfo = elements(array('channel_id', 'itype', 'title', 'filename', 'filename_sub', 'url'), $_POST);
+
+			if(isset($channel_id)){
+				$picinfo['channel_id'] = $channel_id;
+			}
 
 			if(!empty($picinfo['filename_sub'])){
 				$rst_upload_sub = $this->do_upload('filename_sub');
@@ -67,11 +71,11 @@ class Pic extends Basic_Controller {
 		$this->load->view('pic/edit', $data);
 	}
 
-	function update($id)
+	function delete($id)
 	{
-		$data = $this->get_viewdata_4update($id);
+		$this->pic_model->del_byid($id);
 
-		$this->load->view('pic/edit', $data);
+		header("Location: ".$_SERVER['HTTP_REFERER']);
 	}
 
 	function sethomepagebanner()
@@ -105,9 +109,18 @@ class Pic extends Basic_Controller {
 
 		$data["userinfo"] = $this->userinfo;
 		$data["itype"] = 2;
-		$data['cur_channel'] = $this->get_channelid_bycode('homepage');
-		$data['cur_channel']['code'] = 'homepage';
+		$data['cur_channel'] = $this->get_channelid_bycode('main');
+		$data['cur_channel']['code'] = 'main';
 
 		$this->load->view('pic/edit', $data);
+	}
+
+	public function recommend($id){
+		$pic = $this->pic_model->get_byid($id);
+		$pic['recommend']=$pic['recommend']==0 ? 1 : 0;
+
+		$this->pic_model->update($id, $pic);
+		
+		header("Location: ".$_SERVER['HTTP_REFERER']);
 	}
 }

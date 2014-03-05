@@ -7,7 +7,7 @@ class Main extends Basic_Controller {
 	function __construct() {
 		parent::__construct();
 
-		$this->channel_code = 'homepage';
+		$this->channel_code = 'main';
 	}
 
 	public function index($pid=0, $cur_page=1)
@@ -15,6 +15,7 @@ class Main extends Basic_Controller {
 		$data["userinfo"] = $this->userinfo;
 
 		$this->load->model('channel_model');
+		$this->load->model('article_model');
 		$this->load->library('pagination');
 
 		$config['base_url'] = '/admin/main/index/'.$pid;
@@ -34,6 +35,8 @@ class Main extends Basic_Controller {
 		$data['pagination'] = $this->pagination->create_links();
 
 		$data["channels"] = $this->channel_model->get_bycolumn($param, 'ASC', ($cur_page-1)*$config['per_page'], $config['per_page']);
+
+		$data["articles"] = $this->article_model->get_by(array('channel_id'=>1));
 
 		$data['pid'] = $pid;
 

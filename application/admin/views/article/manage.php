@@ -6,7 +6,7 @@
 			</h2>
 
 			<div class="pull-right">
-				[<a href="/admin/product/add">添加文章</a>]
+				[<a href="/admin/<?=$cur_channel['code']?>/add">添加文章</a>]
 			</div>
 		</div>
 		<div class="box-content">
@@ -28,13 +28,21 @@
 							<td class="center "><?= $value['intro'] ?></td>
 							<td class="center "><?= $value['modify_datetime'] ?></td>
 							<td class="center ">
-								<a href="/admin/product/update/<?= $value['id'] ?>">
+								<a href="/admin/<?=$cur_channel['code']?>/update/<?= $value['id'] ?>">
 									<i class="icon-edit icon-white"></i>
 									修改
 								</a>
-								<a data-action="delete" href="/admin/product/delete/<?= $value['id'] ?>">
+								<a data-action="delete" href="/admin/<?=$cur_channel['code']?>/delete/<?= $value['id'] ?>">
 									<i class="icon-trash icon-white"></i>
 									删除
+								</a>
+								<a data-action="recommend" href="/admin/<?=$cur_channel['code']?>/recommend/<?= $value['id'] ?>">
+									<i class="icon-trash icon-white"></i>
+									<?php if($value['recommend']==0): ?>
+									推荐到首页
+									<?php else: ?>
+									取消推荐
+									<?php endif ?>
 								</a>
 							</td>
 						</tr>

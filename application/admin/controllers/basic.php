@@ -61,10 +61,10 @@ class Basic_Controller extends CI_Controller {
 
 	protected function get_channelid_bycode($channel_code){
 		$channels = array(
-			'homepage'=>array('id'=>1, 'name'=>'首页', 'url'=>'/admin/main'),
+			'main'=>array('id'=>1, 'name'=>'首页', 'url'=>'/admin/main'),
 			'product'=>array('id'=>2, 'name'=>'产品服务', 'url'=>'/admin/product'),
-			'case'=>array('id'=>3, 'name'=>'案例展示', 'url'=>'/admin/case'),
-			'new'=>array('id'=>4, 'name'=>'营销动态', 'url'=>'/admin/new'),
+			'mcase'=>array('id'=>3, 'name'=>'案例展示', 'url'=>'/admin/mcase'),
+			'mnew'=>array('id'=>4, 'name'=>'营销动态', 'url'=>'/admin/mnew'),
 			'contact'=>array('id'=>5, 'name'=>'业务联系', 'url'=>'/admin/contact')
 			);
 

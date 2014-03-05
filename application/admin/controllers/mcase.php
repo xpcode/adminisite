@@ -7,7 +7,7 @@ class Mcase extends Basic_article {
 	function __construct() {
 		parent::__construct();
 
-		$this->channel_code = 'case';
+		$this->channel_code = 'mcase';
 	}
 
 	function index($channel_id=NULL, $cur_page=1)

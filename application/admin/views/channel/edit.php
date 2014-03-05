@@ -3,7 +3,7 @@ load->view('/common/header.php'); ?>
 
 <?php
 if(!isset($channel)){
-	$channel = array('id'=>0, 'name'=>'', 'chorder'=>'');
+	$channel = array('id'=>0, 'name'=>'', 'chorder'=>'', 'ctype'=>'');
 }
 ?>
 
@@ -35,6 +35,16 @@ if(!isset($channel)){
 			<div class="box-content">
 				<form class="form-horizontal" action="<?= $action ?>" method="post">
 					<fieldset>
+						<div class="control-group">
+							<label for="selectError3" class="control-label">频道内容类型</label>
+							<div class="controls">
+								<select name="ctype" required>
+							    	<option value="0">请选择频道内容类型</option>
+									<option value="1" <?= 1==$channel['ctype'] ? 'selected="selected"' : "" ?>>富文本</option>
+									<option value="2" <?= 2==$channel['ctype'] ? 'selected="selected"' : "" ?>>图片列表</option>
+							    </select>
+							</div>
+						</div>
 						<div class="control-group">
 							<label for="selectError3" class="control-label">父级频道</label>
 							<div class="controls">
