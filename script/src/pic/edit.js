@@ -9,9 +9,17 @@ define(function(require, exports, module) {
 		initialize: function() {
 			Page.superclass.initialize.call(this);
 
-			var txtintro, txtcontent;
+			var channel_id = $('input[name="channel_id"]').val();
 
-			var options = {
+			if (channel_id == 1) {
+				this._initHomePageSubmitEvent();
+			} else {
+				this._initSubmitEvent();
+			}
+		},
+
+		_getAjaxOptions: function(argument) {
+			return {
 				url: 'add',
 				type: 'POST',
 				dataType: 'json',
@@ -27,7 +35,9 @@ define(function(require, exports, module) {
 					alert('请确认网络正常后重新提交！');
 				}
 			};
+		},
 
+		_initSubmitEvent: function() {
 			$('button[type="submit"]').on("click", function(e) {
 				var title = $('input[name="title"]'),
 					itype = $('select[name="itype"]'),
@@ -56,13 +66,63 @@ define(function(require, exports, module) {
 					}
 				}
 
-				$('form').ajaxSubmit(options);
+				$('form').ajaxSubmit(that._getAjaxOptions());
 
 				return false;
 			});
 
 			$('input[name="filename"]').on('change', function() {
 				$(this).next().text(this.value);
+			});
+		},
+
+		_initHomePageSubmitEvent: function() {
+			var that = this;
+			var filenames = [
+				$('input[name="filename_1"]'),
+				$('input[name="filename_2"]'),
+				$('input[name="filename_3"]'),
+				$('input[name="filename_4"]'),
+				$('input[name="filename_5"]')
+			];
+
+			for (var i = filenames.length - 1; i >= 0; i--) {
+				filenames[i].val('').on('change', function() {
+					$(this).next().text(this.value);
+				});
+			}
+
+			$('button[type="submit"]').on("click", function(e) {
+				var selected = false,
+					selectedError = false;
+
+				for (var i = filenames.length - 1; i >= 0; i--) {
+					var img = filenames[i];
+					var splits = img.val().split('.');
+
+					if (img.val().length > 0) {
+						if (!/gif|jpg|png/.test(splits[splits.length - 1])) {
+							img.parent().next().removeClass("hide").text('只可以上传图片文件');
+							img.get(0).focus();
+							selectedError = true;
+						} else {
+							selected = true;
+						}
+					}
+				}
+
+				if (selected === true) {
+					if (!selectedError) {
+						$('form').ajaxSubmit(that._getAjaxOptions());
+					}
+
+				} else {
+					var img1 = filenames[0];
+					img1.parent().next().removeClass("hide").text('请选择图片');
+					img1.get(0).focus();
+				}
+
+				return false;
 			});
 		}
 	});

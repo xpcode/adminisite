@@ -18,6 +18,12 @@ class Pic extends Basic_Controller {
 
 	function add($channel_code, $itype)
 	{
+		if($channel_code == 'homepage'){
+			$this->sethomepagebanner();
+			return FALSE;
+		}
+
+
 		$channel = $this->get_channelid_bycode($channel_code);
 
 		if(!empty($_POST)){
@@ -64,6 +70,43 @@ class Pic extends Basic_Controller {
 	function update($id)
 	{
 		$data = $this->get_viewdata_4update($id);
+
+		$this->load->view('pic/edit', $data);
+	}
+
+	function sethomepagebanner()
+	{
+		if(!empty($_POST)){
+			$this->load->helper('array');
+
+			$picinfos = elements(array('filename_1', 'filename_2', 'filename_3', 'filename_4', 'filename_5'), $_POST);
+
+			$filenames = array();
+
+			foreach ($picinfos as $key=>$value) {
+				$rst_upload = $this->do_upload($key);
+
+				// 图片上传成功才算
+				if($rst_upload['status']=='success'){
+					$filenames[$key] = $rst_upload['msg']['file_fullname'];
+				}
+			}
+
+			$upload = $this->pic_model->sethomepagebanner_bychannelid(1, $filenames);
+
+			if(empty($upload)){
+				echo json_encode(array('code'=>201));
+			} else {
+				echo json_encode(array('code'=>200, 'href'=>'/admin/main'));
+			}
+			
+			exit();
+		}
+
+		$data["userinfo"] = $this->userinfo;
+		$data["itype"] = 2;
+		$data['cur_channel'] = $this->get_channelid_bycode('homepage');
+		$data['cur_channel']['code'] = 'homepage';
 
 		$this->load->view('pic/edit', $data);
 	}

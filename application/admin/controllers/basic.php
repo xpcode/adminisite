@@ -73,6 +73,7 @@ class Basic_Controller extends CI_Controller {
 
 	protected function do_upload($field_name=NULL, $allowed_types='gif|jpg|png')
 	{
+		$path_db = '/upload/'.date("Y").'/'.date("m").'/';
 		$path = '..\\upload\\'.date("Y").'\\'.date("m");
 
 		if(!realpath($path)){
@@ -94,6 +95,7 @@ class Basic_Controller extends CI_Controller {
 		{
 			$result['status'] = 'success';
 			$result['msg'] = $this->upload->data();
+			$result['msg']['file_fullname'] = $path_db.$result['msg']['file_name'];
 		} 
 		else
 		{

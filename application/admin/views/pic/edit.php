@@ -58,7 +58,8 @@ if(!isset($pic)){
 								<input type="hidden" value="<?= $cur_channel['id'] ?>" class="disabled" name="channel_id">
 							</div>
 						</div>
-						<?php if($itype==1): ?>
+
+						<?php if($cur_channel['id']>1): ?>
 						<div class="control-group">
 							<label class="control-label" for="selectError3">标题</label>
 							<div class="controls">
@@ -67,7 +68,6 @@ if(!isset($pic)){
 								<span class="help-inline hide">请输入1-50字</span>
 							</div>
 						</div>
-						<?php endif ?>
 						<div class="control-group">
 							<label class="control-label" for="selectError3">图片</label>
 							<div class="controls">
@@ -82,6 +82,7 @@ if(!isset($pic)){
 								<?php endif ?>
 							</div>
 						</div>
+						
 						<?php if($itype==1): ?>
 						<div class="control-group">
 							<label class="control-label" for="selectError3">图片2</label>
@@ -105,6 +106,23 @@ if(!isset($pic)){
 							</div>
 						</div>
 						<?php endif ?>
+
+						<?php else: ?>
+						<?php for($i=1;$i<=5;$i++): ?>
+						<div class="control-group">
+							<label class="control-label" for="selectError3">图片</label>
+							<div class="controls">
+								<div id="uniform-undefined" class="uploader" style="width:auto;">
+									<input name="filename_<?=$i?>" type="file" style="opacity: 0;" size="19">
+									<span class="filename">未选择</span>
+									<span class="action">选择文件</span>
+								</div>
+								<span class="help-inline hide">只可以上传图片文件</span>
+							</div>
+						</div>
+						<?php endfor ?>
+						<?php endif ?>
+
 						<div class="form-actions">
 							<button type="submit" class="btn btn-primary">保存</button>
 							<a href="javascript:history.back();" class="btn">取消</a>
