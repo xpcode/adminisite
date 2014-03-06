@@ -6,8 +6,9 @@ class New extends CI_Controller {
 		parent::__construct();
 	}
 
-	public function index()
+	public function index($channel_id=2)
 	{
-		$this->load->view('marketingnews/notice');
+		$this->article_model->get_by
+		$this->load->view('mnew/notice');
 	}
 }
