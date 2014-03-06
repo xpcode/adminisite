@@ -55,7 +55,7 @@
 					</a>
 					<ul class="dropdown-menu">
 						<li>
-							<a href="#">修改密码</a>
+							<a href="/admin/main/modify_pwd">修改密码</a>
 						</li>
 						<li class="divider"></li>
 						<li>

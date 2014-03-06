@@ -10,7 +10,7 @@ class Contact extends Basic_Controller {
 		$this->channel_code='contact';
 	}
 
-	public function index($channel_id=0, $cur_page=1)
+	public function index($channel_id=0, $channel_id_2=0, $cur_page=1)
 	{
 		$data["userinfo"] = $this->userinfo;
 
@@ -24,7 +24,10 @@ class Contact extends Basic_Controller {
 
 		$param = array();
 
-		if(!empty($channel_id)){
+		if($channel_id_2>0){
+			$param['channel_id'] = $channel_id_2;
+
+		} else{
 			$param['channel_id'] = $channel_id;
 		}
 
@@ -35,7 +38,16 @@ class Contact extends Basic_Controller {
 		$data['pagination'] = $this->pagination->create_links();
 
 		$data["contacts"] = $this->contact_model->get_bycolumn($param, 'ASC', ($cur_page-1)*$config['per_page'], $config['per_page']);
-		$data["channels"] = $this->channel_model->get_by(array('pid'=>5));
+		$data["channels"] = $this->channel_model->get_by(array('pid'=>0));
+
+		if($channel_id>0){
+			$data["channels_2"] = $this->channel_model->get_by(array('pid'=>$channel_id));
+		} else {
+			$data["channels_2"] = array();
+		}
+
+		$data['cur_channel_2'] = array('id'=>$channel_id_2);
+		
 		$data['cur_channel'] = array(
 			'id'=>$channel_id,
 			'code'=>$this->channel_code
@@ -45,9 +57,11 @@ class Contact extends Basic_Controller {
 		$this->load->view('contact/manage', $data);
 	}
 
-	public function add()
+	public function add($channel_id=NULL)
 	{
-		$channel=$this->get_channelid_bycode($this->channel_code);
+		if(empty($channel_id)){
+			$channel_id=$this->get_channelid_bycode($this->channel_code)['id'];
+		}
 
 		if(!empty($_POST)){
 			$this->load->helper('array');
@@ -69,7 +83,7 @@ class Contact extends Basic_Controller {
 		$data["action"] = 'add';
 		
 		$this->load->model('channel_model');
-		$data["channels"] = $this->channel_model->get_by(array('pid'=>$channel['id']));
+		$data["channels"] = $this->channel_model->get_by(array('pid'=>$channel_id));
 
 		$this->load->view('contact/edit', $data);
 	}

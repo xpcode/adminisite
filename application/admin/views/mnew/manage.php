@@ -5,9 +5,11 @@
 <div class="span10" id="content">
 	<!-- content starts -->
 
-	<?php $this->load->view('/channel/bar.php'); ?>
-
 	<?php $this->load->view('/pic/banner.php'); ?>
+
+	<br>
+
+	<?php $this->load->view('/channel/bar.php'); ?>
 
 	<?php $this->load->view('/article/manage.php'); ?>
 

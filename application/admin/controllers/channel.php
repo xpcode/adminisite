@@ -13,7 +13,7 @@ class Channel extends Basic_Controller {
 		if(!empty($_POST)){
 			$this->load->helper('array');
 
-			$channelinfo = elements(array('pid', 'name', 'ctype', 'chorder'), $_POST);
+			$channelinfo = elements(array('pid', 'name', 'ctype', 'chorder', 'attrs'), $_POST);
 			$channelinfo['modify_datetime'] = date('Y-m-d H:i:s');
 
 			$this->load->model('channel_model');
@@ -40,7 +40,7 @@ class Channel extends Basic_Controller {
 		if(!empty($_POST)){
 			$this->load->helper('array');
 
-			$channelinfo = elements(array('pid', 'name', 'ctype', 'chorder'), $_POST);
+			$channelinfo = elements(array('pid', 'name', 'ctype', 'chorder', 'attrs'), $_POST);
 			$channelinfo['modify_datetime'] = date('Y-m-d H:i:s');
 
 			$this->load->model('channel_model');

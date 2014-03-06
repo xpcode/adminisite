@@ -3,7 +3,7 @@ load->view('/common/header.php'); ?>
 
 <?php
 if(!isset($channel)){
-	$channel = array('id'=>0, 'name'=>'', 'chorder'=>'', 'ctype'=>'');
+	$channel = array('id'=>0, 'name'=>'', 'chorder'=>'', 'ctype'=>'', 'attrs'=>'');
 }
 ?>
 
@@ -67,6 +67,15 @@ if(!isset($channel)){
 								<span class="help-inline hide">请输入数字</span>
 							</div>
 						</div>
+						<?php if($parent_channel['id']==5): ?>
+						<div class="control-group">
+							<label class="control-label" for="selectError3">其他信息</label>
+							<div class="controls">
+								<textarea id="txtattrs" name="attrs" value="<?= $channel['attrs'] ?>"></textarea>
+								<span class="help-inline hide">请输入1-50字</span>
+							</div>
+						</div>
+						<?php endif ?>
 						<div class="form-actions">
 							<button class="btn btn-primary" type="submit">保存</button>
 							<a class="btn" href="javascript:history.back();">取消</a>

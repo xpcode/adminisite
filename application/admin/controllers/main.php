@@ -49,4 +49,11 @@ class Main extends Basic_Controller {
 
 		$this->load->view('main', $data);
 	}
+
+	public function modify_pwd(){
+		$data["userinfo"] = $this->userinfo;
+		
+		$this->load->view('modify_pwd', $data);
+	}
+
 }

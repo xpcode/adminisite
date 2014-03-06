@@ -6,14 +6,18 @@ load->view('/common/header.php'); ?>
 <div id="content" class="span10">
 	<!-- content starts -->
 
+	<?php $this->load->view('/pic/banner.php'); ?>
+
+	<br>
+
 	<div>
 		<ul class="breadcrumb clearfix">
-			<li>所属频道：</li>
+			<li>所属一级频道：</li>
 			<li>
 				<?php if($cur_channel['id'] == 0): ?>
-				<strong>所有频道</strong>
+				<strong>未选择</strong>
 				<?php else: ?>
-				<a href="/admin/contact">所有频道</a>
+				<a href="/admin/contact">未选择</a>
 				<?php endif ?>
 			</li>
 			<?php foreach ($channels as $key => $value): ?>
@@ -29,7 +33,28 @@ load->view('/common/header.php'); ?>
 		</ul>
 	</div>
 
-	<?php $this->load->view('/pic/banner.php'); ?>
+	<div>
+		<ul class="breadcrumb clearfix">
+			<li>所属二级频道：</li>
+			<li>
+				<?php if($cur_channel_2['id'] == 0): ?>
+				<strong>未选择</strong>
+				<?php else: ?>
+				<a href="/admin/contact/index/<?= $cur_channel['id'] ?>">未选择</a>
+				<?php endif ?>
+			</li>
+			<?php foreach ($channels_2 as $key => $value): ?>
+			<li>
+				<span class="divider">|</span>
+				<?php if($cur_channel_2['id'] == $value['id']): ?>
+				<strong><?= $value['name'] ?></strong>
+				<?php else: ?>
+				<a href="/admin/contact/index/<?= $cur_channel['id'] ?>/<?= $value['id'] ?>"><?= $value['name'] ?></a>
+				<?php endif ?>
+			</li>
+			<?php endforeach ?>
+		</ul>
+	</div>
 
 	<div class="row-fluid sortable ui-sortable">
 		<div class="box span12">
@@ -39,7 +64,7 @@ load->view('/common/header.php'); ?>
 				</h2>
 
 				<div class="pull-right">
-					[<a href="/admin/contact/add">添加联系人</a>]
+					[<a href="/admin/contact/add/<?=$cur_channel['id']?>">添加联系人</a>]
 				</div>
 			</div>
 			<div class="box-content">
