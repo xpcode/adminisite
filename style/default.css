@@ -52,7 +52,7 @@
 .main .content .pager .btn-disabled{background-color:#ccc}
 .main .content .article{padding-left:28px}
 .main .content .article-title{display:block;font-size:25px;text-align:center;color:#393;margin:35px 0 13px}
-.main .content .article-title-small{color:#666;font-family:"microsoft yahei";font-size:14px;margin:0 0 4px}
+.main .content .article-title-small{color:#666;font-family:"microsoft yahei";font-size:14px;margin:0 0 4px}.main .content .article-title-small a{color:#666}
 .main .content .list-item-large{margin:30px 0 35px}
 .main .content .article-date{font-size:12px;text-align:center;color:#ccc}
 .main .content .article-date-small{color:#999}

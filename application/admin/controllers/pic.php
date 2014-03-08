@@ -23,8 +23,12 @@ class Pic extends Basic_Controller {
 			return FALSE;
 		}
 
+		if(isset($channel_id)){
+			$cur_channel = $this->channel_model->get_byid($channel_id);
 
-		$channel = $this->get_channelid_bycode($channel_code);
+		} else {
+			$cur_channel = $this->get_channelid_bycode($channel_code);
+		}
 
 		if(!empty($_POST)){
 			$this->load->helper('array');
@@ -50,7 +54,7 @@ class Pic extends Basic_Controller {
 			// 图片上传成功才算
 			if($rst_upload['status']=='success'){
 				if($picinfo['itype']==2){
-					$pic_id = $this->pic_model->setbanner_bychannelid($channel['id'], $rst_upload['msg']['file_fullname'], $picinfo['url']);
+					$pic_id = $this->pic_model->setbanner_bychannelid($cur_channel['id'], $rst_upload['msg']['file_fullname'], $picinfo['url']);
 
 				} else if($picinfo['itype']==1){
 					$picinfo['filename'] = $rst_upload['msg']['file_fullname'];
@@ -59,7 +63,7 @@ class Pic extends Basic_Controller {
 				}
 
 				if($pic_id){
-					echo json_encode(array('code'=>200, 'href'=>'/admin/'.$channel_code.'/index/'.$channel['id']));
+					echo json_encode(array('code'=>200, 'href'=>'/admin/'.$channel_code.'/index/'.$cur_channel['id']));
 				} else {
 					echo json_encode(array('code'=>201));
 				}
@@ -70,7 +74,7 @@ class Pic extends Basic_Controller {
 
 		$data["userinfo"] = $this->userinfo;
 		$data["itype"] = $itype;
-		$data['cur_channel'] = $channel;
+		$data['cur_channel'] = $cur_channel;
 		$data['cur_channel']['code'] = $channel_code;
 
 		$this->load->view('pic/edit', $data);

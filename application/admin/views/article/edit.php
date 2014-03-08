@@ -72,14 +72,14 @@ if(!isset($article)){
 						<div class="control-group">
 							<label class="control-label" for="selectError3">简介</label>
 							<div class="controls">
-								<textarea id="txtintro" name="intro" value="<?= $article['intro'] ?>"></textarea>
+								<textarea id="txtintro" name="intro"><?= $article['intro'] ?></textarea>
 								<span class="help-inline hide">请输入1-50字</span>
 							</div>
 						</div>
 						<div class="control-group">
 							<label class="control-label" for="selectError3">内容</label>
 							<div class="controls">
-								<textarea id="txtcontent" name="content" value="<?= $article['content'] ?>"></textarea>
+								<textarea id="txtcontent" name="content"><?= $article['content'] ?></textarea>
 								<span class="help-inline hide">请输入1-50字</span>
 							</div>
 						</div>

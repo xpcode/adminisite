@@ -25,9 +25,10 @@
                 <?php $this->load->view('/common/crumbs.php'); ?>
 
                 <div class="list-block non-border">
-                    <h3 class="area-title"><?= $cur_channel['name'] ?></h3>
 
                     <?php if($cur_channel['ctype']==1): ?>
+                    
+                    <h3 class="area-title"><?= $cur_channel['name'] ?></h3>
 
                     <?php $this->load->view('/common/rtext_list.php'); ?>
 

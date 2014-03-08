@@ -101,7 +101,7 @@ if(!isset($pic)){
 						<div class="control-group">
 							<label class="control-label" for="selectError3">链接</label>
 							<div class="controls">
-								<input type="text" value="<?= $pic['url'] ?>" class="focused" required name="title">
+								<input type="text" value="<?= $pic['url'] ?>" class="focused" required name="url">
 								<span class="help-inline hide">请输入1-50字</span>
 							</div>
 						</div>

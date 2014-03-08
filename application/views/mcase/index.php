@@ -30,9 +30,9 @@
                 <?php else: ?>
 
                 <div class="list-block non-border">
-                    <h3 class="area-title"><?= $cur_channel['name'] ?></h3>
-
                     <?php if($cur_channel['ctype']==1): ?>
+                    
+                    <h3 class="area-title"><?= $cur_channel['name'] ?></h3>
 
                     <?php $this->load->view('/common/rtext_list.php'); ?>
 
@@ -45,8 +45,6 @@
                 	<?php $this->load->view('/common/re_contact_list.php'); ?>
                 	
                 	<?php endif ?>
-
-                    <?php $this->load->view('/common/re_contact.php'); ?>
 
                 </div>
 

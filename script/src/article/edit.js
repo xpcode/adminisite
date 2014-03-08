@@ -32,6 +32,9 @@ define(function(require, exports, module) {
 				});
 				txtcontent = CKEDITOR.replace('txtcontent');
 
+				txtintro.setData($('#txtintro').val());
+				txtcontent.setData($('#txtcontent').val());
+
 				$('button[type="submit"]').on("click", function(e) {
 					var title = $('input[name="title"]'),
 						intro = $('#txtintro'),

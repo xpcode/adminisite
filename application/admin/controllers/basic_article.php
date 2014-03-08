@@ -63,7 +63,7 @@ class Basic_article extends Basic_Controller {
 			$rst_upload = $this->do_upload('img');
 
 			if($rst_upload['status']=='success'){
-				$articleinfo['img'] = $rst_upload['msg']['full_path'];
+				$articleinfo['img'] = $rst_upload['msg']['file_fullname'];
 			}
 
 			$articleinfo['modify_datetime'] = date('Y-m-d H:i:s');

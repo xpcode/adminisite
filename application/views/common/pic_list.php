@@ -5,9 +5,9 @@
     <?php foreach ($pic_list as $key=>$value): ?>
 
     <div class="imgblock-list-item">
-        <img alt="" src="<?= $values['filename'] ?>">
+        <img alt="" src="<?= $value['filename'] ?>">
         <div>
-            <a><?= $values['title'] ?></a>
+            <a target="_blank" href="<?= $value['url'] ?>"><?= $value['title'] ?></a>
         </div>
     </div>
 

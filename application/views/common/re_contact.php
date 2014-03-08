@@ -5,9 +5,9 @@
 <div class="qalist-group h-auto-pb10">
     <div class="qalist-group-bg clearfix">
 
-        <?php if(!empty($contact_list) AND is_array($contact_list)): ?>
+        <?php if(!empty($re_contact_list) AND is_array($re_contact_list)): ?>
 
-        <?php foreach ($contact_list as $key=>$value): ?>
+        <?php foreach ($re_contact_list as $key=>$value): ?>
 
          <div class="qalist">
             <div class="qalistitem-title <?=$key>0?'ml25':''?>"><?= $value['project'] ?></div>
