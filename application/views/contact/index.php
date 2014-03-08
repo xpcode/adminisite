@@ -1,9 +1,11 @@
-<?php $this->
-load->view('/common/header.php'); ?>
+<?php $this->load->view('/common/header.php'); ?>
+
 <div class="banner bg_EDEEE8 mb50">
     <div class="container">
-        <img width="1000" height="200" src="/style/images/banner_contact.gif" alt=""></div>
+        <?php $this->load->view('/common/banner.php'); ?>
+    </div>
 </div>
+
 <div class="container">
     <div class="main mb112">
         <div class="clearfix">
@@ -86,5 +88,4 @@ load->view('/common/header.php'); ?>
     </div>
 </div>
 
-<?php $this->
-load->view('/common/footer.php'); ?>
+<?php $this->load->view('/common/footer.php'); ?>

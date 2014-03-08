@@ -21,21 +21,21 @@
                     <img src="/style/images/logo.jpg" width="200" height="60" alt=""></a>
             </h1>
             <ul class="nav pull-right clearfix">
-                <li class="active">
+                <li <?=$channel_code=='main'?'class="active"':'' ?>>
                     <a href="/index">首页</a> <em class="left8"></em>
                 </li>
-                <li>
-                    <a href="/service">产品服务</a> <em></em>
+                <li <?=$channel_code=='product'?'class="active"':'' ?>>
+                    <a href="/product">产品服务</a> <em></em>
                 </li>
-                <li>
-                    <a href="/case">案例展示</a>
+                <li <?=$channel_code=='mcase'?'class="active"':'' ?>>
+                    <a href="/mcase">案例展示</a>
                     <em></em>
                 </li>
-                <li>
-                    <a href="/marketingnews">营销动态</a>
+                <li <?=$channel_code=='mnew'?'class="active"':'' ?>>
+                    <a href="/mnew">营销动态</a>
                     <em></em>
                 </li>
-                <li>
+                <li <?=$channel_code=='contact'?'class="active"':'' ?>>
                     <a href="/contact">业务联系</a>
                     <em></em>
                 </li>

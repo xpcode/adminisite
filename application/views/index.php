@@ -1,16 +1,8 @@
-<?php $this->
-load->view('/common/header.php'); ?>
+<?php $this->load->view('/common/header.php'); ?>
 
 <div class="banner bg_FFFFFF">
     <div class="container h320">
-        <img width="1000" height="320" src="/style/images/banner_index.gif" alt="焦点图">
-        <ul class="rotate-btns clearfix">
-            <li></li>
-            <li></li>
-            <li class="active"></li>
-            <li></li>
-            <li></li>
-        </ul>
+        <?php $this->load->view('/common/banner.php'); ?>
     </div>
 </div>
 <div class="main bg_grid">
@@ -22,21 +14,21 @@ load->view('/common/header.php'); ?>
         <div class="pull-left w690">
             <div class="grid-group clearfix">
                 <div class="grid">
-                    <img src="/style/images/index_r2_c2.gif" alt="广告宣传"></div>
+                    <a href="/product/6"><img src="/style/images/index_r2_c2.gif" alt="广告宣传"></a></div>
                 <div class="grid">
-                    <img src="/style/images/index_r2_c3.gif" alt="艺术导购"></div>
+                    <a href="/product/2"><img src="/style/images/index_r2_c3.gif" alt="艺术导购"></a></div>
                 <div class="grid">
-                    <img src="/style/images/index_r2_c4.gif" alt="拍卖预展"></div>
+                    <a href="/product/8"><img src="/style/images/index_r2_c4.gif" alt="拍卖预展"></a></div>
                 <div class="grid">
-                    <img src="/style/images/index_r2_c5.gif" alt="地方分站"></div>
+                    <a href="/product/9"><img src="/style/images/index_r2_c5.gif" alt="地方分站"></a></div>
                 <div class="grid">
-                    <img src="/style/images/index_r2_c9.gif" alt="艺术数据"></div>
+                    <a href="/product/10"><img src="/style/images/index_r2_c9.gif" alt="艺术数据"></a></div>
                 <div class="grid">
-                    <img src="/style/images/index_r2_c8.gif" alt="电子商务"></div>
+                    <a href="/product/11"><img src="/style/images/index_r2_c8.gif" alt="电子商务"></a></div>
                 <div class="grid">
-                    <img src="/style/images/index_r2_c7.gif" alt="艺术宣传"></div>
+                    <a href="/product/12"><img src="/style/images/index_r2_c7.gif" alt="艺术宣传"></a></div>
                 <div class="grid">
-                    <img src="/style/images/index_r2_c6.gif" alt="数字资产"></div>
+                    <a href="/product/13"><img src="/style/images/index_r2_c6.gif" alt="数字资产"></a></div>
             </div>
             <div class="guide">
                 <span class="font1">你想</span>
@@ -44,24 +36,25 @@ load->view('/common/header.php'); ?>
             </div>
             <div class="qalist-group">
                 <div class="qalist-group-bg clearfix">
-                    <div class="qalist">
-                        <div class="qalistitem-title">什么是雅昌推广？</div>
-                        <div class="qalist-item"><a href="">什么是雅昌推广？</a></div>
-                        <div class="qalist-item"><a href="">雅昌推广是如何展现的？</a></div>
-                        <div class="qalist-item"><a href="">雅昌推广如何计费？</a></div>
-                    </div>
-                    <div class="qalist">
-                        <div class="qalistitem-title">什么是雅昌推广？</div>
-                        <div class="qalist-item"><a href="">雅昌推广的优势是什么？</a></div>
-                        <div class="qalist-item"><a href="">雅昌推广如何控制预算？</a></div>
-                        <div class="qalist-item"><a href="">雅昌提供清晰的消费账单么？</a></div>
-                    </div>
-                    <div class="qalist">
-                        <div class="qalistitem-title ml25">什么是雅昌推广？</div>
-                        <div class="qalist-item ml25"><a href="">如何申请购买雅昌推广服务？</a></div>
-                        <div class="qalist-item ml25"><a href="">我想购买，怎么付款？</a></div>
-                        <div class="qalist-item ml25"><a href="">雅昌推广开户流程是什么？</a></div>
-                    </div>
+
+                    <?php if(!empty($articles_qa_list)): ?>
+                    <?php foreach ($articles_qa_list as $articles_qa): ?>
+                        <?php if(!empty($articles_qa)): ?>
+
+                        <?php foreach ($articles_qa as $key=>$value): ?>
+                        <div class="qalist">
+                            <?php if($key==0): ?>
+                            <div class="qalistitem-title"><a href="/article/<?= $value['id'] ?>"><?= $value['title'] ?></a></div>
+                            <?php else: ?>
+                            <div class="qalist-item"><a href="/article/<?= $value['id'] ?>"><?= $value['title'] ?></a></div>
+                            <?php endif ?>
+                        </div>
+                        <?php endforeach ?>
+
+                        <?php endif ?>
+                    <?php endforeach ?>
+                    <?php endif ?>
+
                 </div>
             </div>
             <div class="guide">
@@ -69,34 +62,14 @@ load->view('/common/header.php'); ?>
                 <span class="font2">合作的...</span>
             </div>
             <div class="icons-list clearfix">
+
+                <?php if(!empty($cooperation_logos)): ?>
+                <?php foreach ($cooperation_logos as $key=>$value): ?>
                 <div class="icons-list-item">
-                    <img src="/style/images/logo_01.gif" alt=""></div>
-                <div class="icons-list-item">
-                    <img src="/style/images/logo_02.gif" alt=""></div>
-                <div class="icons-list-item">
-                    <img src="/style/images/logo_03.gif" alt=""></div>
-                <div class="icons-list-item">
-                    <img src="/style/images/logo_04.gif" alt=""></div>
-                <div class="icons-list-item">
-                    <img src="/style/images/logo_05.gif" alt=""></div>
-                <div class="icons-list-item">
-                    <img src="/style/images/logo_06.gif" alt=""></div>
-                <div class="icons-list-item">
-                    <img src="/style/images/logo_07.gif" alt=""></div>
-                <div class="icons-list-item">
-                    <img src="/style/images/logo_08.gif" alt=""></div>
-                <div class="icons-list-item">
-                    <img src="/style/images/logo_09.gif" alt=""></div>
-                <div class="icons-list-item">
-                    <img src="/style/images/logo_10.gif" alt=""></div>
-                <div class="icons-list-item">
-                    <img src="/style/images/logo_11.gif" alt=""></div>
-                <div class="icons-list-item">
-                    <img src="/style/images/logo_12.gif" alt=""></div>
-                <div class="icons-list-item">
-                    <img src="/style/images/logo_13.gif" alt=""></div>
-                <div class="icons-list-item">
-                    <img src="/style/images/logo_14.gif" alt=""></div>
+                    <img src="<?= $value['filename'] ?>" alt=""></div>
+                <?php endforeach ?>
+                <?php endif ?>
+
             </div>
         </div>
         <div class="pull-right w280">
@@ -104,23 +77,17 @@ load->view('/common/header.php'); ?>
                 <img src="/style/images/index_tel.gif" alt=""></div>
             <div class="notice-block">
                 <h3>
-                    <img src="/style/images/bg_notice.gif" alt="公告"></h3>
+                    <img src="/style/images/bg_notice.gif" alt=""></h3>
                 <ul>
+
+                    <?php if(!empty($articles)): ?>
+                    <?php foreach ($articles as $key=>$value): ?>
                     <li class="notice-block-item">
-                        <a href="">111111</a>
+                        <a href=""><?= $value['title'] ?></a>
                     </li>
-                    <li class="notice-block-item">
-                        <a href="">111111</a>
-                    </li>
-                    <li class="notice-block-item">
-                        <a href="">111111</a>
-                    </li>
-                    <li class="notice-block-item">
-                        <a href="">111111</a>
-                    </li>
-                    <li class="notice-block-item">
-                        <a href="">111111</a>
-                    </li>
+                    <?php endforeach ?>
+                    <?php endif ?>
+
                 </ul>
             </div>
             <div class="guide">
@@ -141,5 +108,4 @@ load->view('/common/header.php'); ?>
     </div>
 </div>
 
-<?php $this->
-load->view('/common/footer.php'); ?>
+<?php $this->load->view('/common/footer.php'); ?>

@@ -1,15 +1,22 @@
-<?php 
+<?php
 
-class Contact extends CI_Controller {
+require_once('basic.php');
+
+class Contact extends Basic {
 
 	function __construct() {
 		parent::__construct();
+
+		$this->channel_id = 5;
+		$this->channel_code = 'contact';
 	}
 
 	public function index()
 	{
-		$data['area_list'] = $query->result_array();
+		$data['banner'] = $this->getbanner(5);
+		$data['cur_channel'] = $this->get_channelid_bycode($this->channel_code);
+		$data['channels'] = $this->get_by(array('id'=>$data['cur_channel']['id']));
 
-		$this->load->view('contacts/index', $data);
+		$this->load->view('contact/index', $data);
 	}
 }
