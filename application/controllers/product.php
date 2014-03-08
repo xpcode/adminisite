@@ -32,7 +32,7 @@ class Product extends Basic {
 		}
 		
 		$this->load->model('contact_model');
-		$data['re_contact_list'] = $this->contact_model->get_bycolumn(array('channel_id'=>$sub_channel_id, 'recommend'=>0), 'DESC', NULL, 3);
+		$data['re_contact_list'] = $this->contact_model->get_bycolumn(array('channel_id'=>$sub_channel_id), 'DESC', NULL, 3);
 
 		$this->load->view('product/index', $data);
 	}

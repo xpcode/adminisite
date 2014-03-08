@@ -14,21 +14,21 @@
         <div class="pull-left w690">
             <div class="grid-group clearfix">
                 <div class="grid">
-                    <a href="/product/6"><img src="/style/images/index_r2_c2.gif" alt="广告宣传"></a></div>
+                    <a href="/product/index/6"><img src="/style/images/index_r2_c2.gif" alt="广告宣传"></a></div>
                 <div class="grid">
-                    <a href="/product/2"><img src="/style/images/index_r2_c3.gif" alt="艺术导购"></a></div>
+                    <a href="/product/index/7"><img src="/style/images/index_r2_c3.gif" alt="艺术导购"></a></div>
                 <div class="grid">
-                    <a href="/product/8"><img src="/style/images/index_r2_c4.gif" alt="拍卖预展"></a></div>
+                    <a href="/product/index/8"><img src="/style/images/index_r2_c4.gif" alt="拍卖预展"></a></div>
                 <div class="grid">
-                    <a href="/product/9"><img src="/style/images/index_r2_c5.gif" alt="地方分站"></a></div>
+                    <a href="/product/index/9"><img src="/style/images/index_r2_c5.gif" alt="地方分站"></a></div>
                 <div class="grid">
-                    <a href="/product/10"><img src="/style/images/index_r2_c9.gif" alt="艺术数据"></a></div>
+                    <a href="/product/index/10"><img src="/style/images/index_r2_c9.gif" alt="艺术数据"></a></div>
                 <div class="grid">
-                    <a href="/product/11"><img src="/style/images/index_r2_c8.gif" alt="电子商务"></a></div>
+                    <a href="/product/index/11"><img src="/style/images/index_r2_c8.gif" alt="电子商务"></a></div>
                 <div class="grid">
-                    <a href="/product/12"><img src="/style/images/index_r2_c7.gif" alt="艺术宣传"></a></div>
+                    <a href="/product/index/12"><img src="/style/images/index_r2_c7.gif" alt="艺术宣传"></a></div>
                 <div class="grid">
-                    <a href="/product/13"><img src="/style/images/index_r2_c6.gif" alt="数字资产"></a></div>
+                    <a href="/product/index/13"><img src="/style/images/index_r2_c6.gif" alt="数字资产"></a></div>
             </div>
             <div class="guide">
                 <span class="font1">你想</span>

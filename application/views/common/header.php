@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>数字营销管理平台</title>
+    <title>雅昌艺术网</title>
     <link href="/style/bootstrap/2.3.2/bootstrap-min.css" rel="stylesheet" type="text/css">
     <link href="/style/default.css" rel="stylesheet" type="text/css">
     <!--[if lte IE 6]>
