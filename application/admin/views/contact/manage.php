@@ -64,7 +64,7 @@ load->view('/common/header.php'); ?>
 				</h2>
 
 				<div class="pull-right">
-					[<a href="/admin/contact/add/<?=$cur_channel['id']?>">添加联系人</a>]
+					[<a href="/admin/contact/add/<?=$cur_channel['id']?>/<?=$cur_channel_2['id']?>">添加联系人</a>]
 				</div>
 			</div>
 			<div class="box-content">

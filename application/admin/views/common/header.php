@@ -59,7 +59,7 @@
 						</li>
 						<li class="divider"></li>
 						<li>
-							<a href="logout">退出</a>
+							<a href="/admin/logout">退出</a>
 						</li>
 					</ul>
 				</div>

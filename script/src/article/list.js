@@ -1,7 +1,7 @@
 define(function(require, exports, module) {
 
 	var $ = require('$');
-	var BasePage = require('base');
+	var BasePage = require('../base');
 
 	require('noncmd-lib/jquery-ui-1.8.21.custom.min');
 

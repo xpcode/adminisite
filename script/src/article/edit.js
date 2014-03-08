@@ -1,7 +1,7 @@
 define(function(require, exports, module) {
 
 	var $ = require('$');
-	var BasePage = require('base');
+	var BasePage = require('../base');
 
 	require('ajaxform');
 

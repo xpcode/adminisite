@@ -52,6 +52,22 @@ class Main extends Basic_Controller {
 
 	public function modify_pwd(){
 		$data["userinfo"] = $this->userinfo;
+		$data['errormsg'] = '';
+
+		if(!empty($_POST)){
+			if(md5($_POST['password_old']) != $this->userinfo['password']){
+				$data['errormsg'] = '您输入的旧密码不正确！';
+
+			} else {
+				$this->load->model('user_model');
+				$user_id = $this->user_model->update($data["userinfo"]['id'], array('password'=>md5($_POST['password'])));
+
+				if(!empty($user_id)){
+					header('Location: /admin/logout');
+					exit();
+				}
+			}
+		}
 		
 		$this->load->view('modify_pwd', $data);
 	}

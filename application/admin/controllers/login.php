@@ -6,6 +6,7 @@ class Login extends CI_Controller {
 		parent::__construct();
 	}
 
+	// a66abb5684c45962d887564f08346e8d admin123456
 	public function index()
 	{
 		$is_login = FALSE;

@@ -42,6 +42,7 @@ if(!isset($channel)){
 							    	<option value="0">请选择频道内容类型</option>
 									<option value="1" <?= 1==$channel['ctype'] ? 'selected="selected"' : "" ?>>富文本</option>
 									<option value="2" <?= 2==$channel['ctype'] ? 'selected="selected"' : "" ?>>图片列表</option>
+									<option value="3" <?= 3==$channel['ctype'] ? 'selected="selected"' : "" ?>>联系人</option>
 							    </select>
 							</div>
 						</div>

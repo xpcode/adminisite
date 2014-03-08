@@ -57,7 +57,7 @@ class Contact extends Basic_Controller {
 		$this->load->view('contact/manage', $data);
 	}
 
-	public function add($channel_id=NULL)
+	public function add($channel_id=NULL, $channel_id_2=NULL)
 	{
 		if(empty($channel_id)){
 			$channel_id=$this->get_channelid_bycode($this->channel_code)['id'];
@@ -74,13 +74,13 @@ class Contact extends Basic_Controller {
 			$contact_id = $this->contact_model->add($contactinfo);
 
 			if($contact_id){
-				header('Location: /admin/contact/index/'.$contactinfo['channel_id']);
+				header('Location: /admin/contact/index/'.$channel_id.'/'.$contactinfo['channel_id']);
 				exit();
 			}
 		}
 
 		$data["userinfo"] = $this->userinfo;
-		$data["action"] = 'add';
+		$data["action"] = '/admin/contact/add/'.$channel_id.'/'.$channel_id_2;
 		
 		$this->load->model('channel_model');
 		$data["channels"] = $this->channel_model->get_by(array('pid'=>$channel_id));

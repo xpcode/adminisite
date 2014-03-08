@@ -15,27 +15,33 @@ load->view('/common/header.php'); ?>
 				</h2>
 			</div>
 			<div class="box-content">
-				<form class="form-horizontal" action="/main/modify_pwd" method="post">
+				<?php if(!empty($errormsg)): ?>
+
+				<script>alert('<?= $errormsg ?>');</script>
+				
+				<?php endif ?>
+
+				<form class="form-horizontal" action="/admin/main/modify_pwd" method="post">
 					<fieldset>
 						<div class="control-group">
 							<label for="selectError3" class="control-label">旧密码</label>
 							<div class="controls">
-								<input type="password" name="password_old" required class="focused">
+								<input type="password" name="password_old" maxlength="20" required class="focused">
 								<span class="help-inline hide">请输入正确的旧密码</span>
 							</div>
 						</div>
 						<div class="control-group">
 							<label for="selectError3" class="control-label">新密码</label>
 							<div class="controls">
-								<input type="password" name="password_new" required class="focused">
+								<input type="password" name="password_new" maxlength="20" required class="focused">
 								<span class="help-inline hide">请输入正确的新密码</span>
 							</div>
 						</div>
 						<div class="control-group">
 							<label for="focusedInput" class="control-label">重复新密码</label>
 							<div class="controls">
-								<input type="password" name="password" required class="focused">
-								<span class="help-inline hide">请输入1-20字</span>
+								<input type="password" name="password" maxlength="20" required class="focused">
+								<span class="help-inline hide">请再次输入新密码</span>
 							</div>
 						</div>
 						<div class="form-actions">

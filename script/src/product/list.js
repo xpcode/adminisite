@@ -1,7 +1,7 @@
 define(function(require, exports, module) {
 
 	var $ = require('$');
-	var BasePage = require('base');
+	var BasePage = require('../base');
 	var ArticleList = require('../article/list');
 
 	var Page = BasePage.extend({
