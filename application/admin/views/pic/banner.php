@@ -15,8 +15,6 @@
 			<a href="<?= $value['filename'] ?>" target="_blank"><img src="<?= $value['filename'] ?>" style="width:auto; height:200px;display:inline-block;" alt="请上传图片"></a>
 			<?php endforeach ?>
 
-			<?php else: ?>
-			<a href="<?= $banner['filename'] ?>" target="_blank"><img src="<?= $banner['filename'] ?>" style="width:auto; height:200px;display:inline-block;" alt="请上传图片"></a>
 			<?php endif ?>
 		</div>
 	</div>

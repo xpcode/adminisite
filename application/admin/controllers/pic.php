@@ -39,7 +39,7 @@ class Pic extends Basic_Controller {
 				$rst_upload_sub = $this->do_upload('filename_sub');
 
 				if($rst_upload_sub['status']=='success'){
-					$picinfo['filename_sub'] = $rst_upload_sub['msg']['full_path'];
+					$picinfo['filename_sub'] = $rst_upload_sub['msg']['file_fullname'];
 				}
 			}
 
@@ -49,9 +49,14 @@ class Pic extends Basic_Controller {
 
 			// 图片上传成功才算
 			if($rst_upload['status']=='success'){
-				$picinfo['filename'] = $rst_upload['msg']['full_path'];
+				if($picinfo['itype']==2){
+					$pic_id = $this->pic_model->setbanner_bychannelid($channel['id'], $rst_upload['msg']['file_fullname'], $picinfo['url']);
 
-				$pic_id = $this->pic_model->add($picinfo);
+				} else if($picinfo['itype']==1){
+					$picinfo['filename'] = $rst_upload['msg']['file_fullname'];
+
+					$pic_id = $this->pic_model->add($picinfo);
+				}
 
 				if($pic_id){
 					echo json_encode(array('code'=>200, 'href'=>'/admin/'.$channel_code.'/index/'.$channel['id']));

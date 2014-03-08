@@ -16,33 +16,21 @@ class Pic_model extends CRM_model {
 
 		if(!empty($imgs)){
 
-			if($channel_id==1){
-				return $imgs;
-			}
-
-			return $imgs[0];
+			return $imgs;
 		}
 		return FALSE;
 	}
 
 	function setbanner_bychannelid($channel_id, $filename, $url){
-		$banner = $this->getbanner_bychannelid($channel_id);
+		$this->deletebanner_bychannelid($channel_id);
 
-		if($banner){
-			$banner['filename'] = $filename;
-			$banner['url'] = $url;
-			$banner['modify_datetime'] = date('Y-m-d H:i:s');
+		$banner['channel_id'] = $channel_id;
+		$banner['itype'] = 2;
+		$banner['filename'] = $filename;
+		$banner['url'] = $url;
+		$banner['modify_datetime'] = date('Y-m-d H:i:s');
 
-			$banner_id = $this->update($banner['id'], $banner);
-		} else {
-			$banner = array();
-			$banner['itype'] = 2;
-			$banner['filename'] = $filename;
-			$banner['url'] = $url;
-			$banner['modify_datetime'] = date('Y-m-d H:i:s');
-
-			$banner_id = $this->add($banner);
-		}
+		$banner_id = $this->add($banner);
 
 		return $banner_id;
 	}

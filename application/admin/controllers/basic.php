@@ -47,7 +47,7 @@ class Basic_Controller extends CI_Controller {
 	private function recursive_mkdir($path, $mode = 0777) {
 	    $dirs = explode(DIRECTORY_SEPARATOR , $path);
 	    $count = count($dirs);
-	    $path = '.';
+	    $path = '..';
 
 	    for ($i = 0; $i < $count; ++$i) {
 	        $path .= DIRECTORY_SEPARATOR . $dirs[$i];
@@ -74,12 +74,14 @@ class Basic_Controller extends CI_Controller {
 	protected function do_upload($field_name=NULL, $allowed_types='gif|jpg|png')
 	{
 		$path_db = '/upload/'.date("Y").'/'.date("m").'/';
-		$path = '..\\upload\\'.date("Y").'\\'.date("m");
+		$path = '../upload/'.date("Y").'/'.date("m");
 
-		if(!realpath($path)){
-			if($this->recursive_mkdir($path)){
+		if(empty(realpath($path))){
+			if($this->recursive_mkdir($path_db)){
 				$path = realpath($path);
 			}
+		} else {
+			$path = realpath($path);
 		}
 
 		$config['upload_path'] = $path;

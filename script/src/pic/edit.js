@@ -20,7 +20,6 @@ define(function(require, exports, module) {
 
 		_getAjaxOptions: function(argument) {
 			return {
-				url: 'add',
 				type: 'POST',
 				dataType: 'json',
 				success: function(result) {
@@ -38,6 +37,7 @@ define(function(require, exports, module) {
 		},
 
 		_initSubmitEvent: function() {
+			var that = this;
 			$('button[type="submit"]').on("click", function(e) {
 				var title = $('input[name="title"]'),
 					itype = $('select[name="itype"]'),
