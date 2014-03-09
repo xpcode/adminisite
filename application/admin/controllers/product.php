@@ -10,18 +10,18 @@ class Product extends Basic_article {
 		$this->channel_code = 'product';
 	}
 
-	function index($channel_id=NULL, $cur_page=1)
+	function index($channel_id=NULL, $cur_page=1, $channel_id_2=NULL)
 	{
-		$data = $this->get_viewdata_4list($channel_id, $cur_page);
+		$data = $this->get_viewdata_4list($channel_id, $cur_page, $channel_id_2);
 
 		$data['banner'] = $this->get_banner();
 
 		$this->load->view($this->channel_code.'/manage', $data);
 	}
 
-	function add()
+	function add($channel_id=NULL)
 	{
-		$data = $this->get_viewdata_4add();
+		$data = $this->get_viewdata_4add($channel_id);
 
 		$this->load->view('article/edit', $data);
 	}

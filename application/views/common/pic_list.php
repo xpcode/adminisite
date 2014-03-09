@@ -4,7 +4,7 @@
 
     <?php foreach ($pic_list as $key=>$value): ?>
 
-    <div class="imgblock-list-item">
+    <div class="imgblock-list-item border-ccc">
         <img alt="" src="<?= $value['filename'] ?>">
         <div>
             <a target="_blank" href="<?= $value['url'] ?>"><?= $value['title'] ?></a>

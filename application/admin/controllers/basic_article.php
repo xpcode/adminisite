@@ -12,7 +12,7 @@ class Basic_article extends Basic_Controller {
 		$this->load->model('channel_model');
 	}
 
-	protected function get_viewdata_4list($channel_id, $cur_page)
+	protected function get_viewdata_4list($channel_id, $cur_page=1, $channel_id_2=NULL)
 	{
 		$channel=$this->get_channelid_bycode($this->channel_code);
 
@@ -20,7 +20,11 @@ class Basic_article extends Basic_Controller {
 			$channel_id = $channel['id'];
 		}
 
-		$param = array('channel_id'=>$channel_id);
+		if(isset($channel_id_2)){
+			$param = array('channel_id'=>$channel_id_2);
+		} else {
+			$param = array('channel_id'=>$channel_id);
+		}
 
 		$this->load->library('pagination');
 
@@ -48,12 +52,21 @@ class Basic_article extends Basic_Controller {
 		$data['cur_channel'] = $this->channel_model->get_byid($channel_id);
 		$data['cur_channel']['code']=$this->channel_code;
 
+		if($channel_id==7){
+			$data['channels_2'] = $this->channel_model->get_by(array('pid'=>$channel_id));
+			$data['cur_channel_2'] = $this->channel_model->get_byid($channel_id_2);
+		}
+
 		return $data;
 	}
 
-	protected function get_viewdata_4add()
+	protected function get_viewdata_4add($channel_id=NULL)
 	{
-		$channel=$this->get_channelid_bycode($this->channel_code);
+		if(!empty($channel_id)){
+			$channel=$this->channel_model->get_byid($channel_id);
+		} else {
+			$channel=$this->get_channelid_bycode($this->channel_code);
+		}
 
 		if(!empty($_POST)){
 			$this->load->helper('array');

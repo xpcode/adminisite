@@ -11,7 +11,10 @@
     <!--[if lte IE 7]>
     <link rel="stylesheet" type="text/css" href="/style/bootstrap/2.3.2/ie.css">
     <![endif]-->
-    <script src="http://static.dmp.cig.com.cn/sea-modules/seajs/seajs/2.1.1/sea.js"></script>
+    <script src="/script/sea-modules/seajs/seajs/2.1.1/sea.js"></script>
+    <script>
+    seajs.use('/script/src/1.0.js');
+    </script>
 </head>
 <body>
     <div class="header">

@@ -6,7 +6,11 @@
 			</h2>
 
 			<div class="pull-right">
+				<?php if($cur_channel['id']==7): ?>
+				[<a href="/admin/<?=$cur_channel['code']?>/add/<?=$cur_channel['id']?>">添加文章</a>]
+				<?php else: ?>
 				[<a href="/admin/<?=$cur_channel['code']?>/add">添加文章</a>]
+				<?php endif ?>
 			</div>
 		</div>
 		<div class="box-content">
@@ -25,7 +29,7 @@
 						<?php foreach ($articles as $key => $value): ?>
 						<tr class="<?= $key%2==0 ? 'odd': 'even' ?>">
 							<td class="  sorting_1"><?= $value['title'] ?></td>
-							<td class="center "><?= $value['intro'] ?></td>
+							<td class="center " style="width:40%"><?= $value['intro'] ?></td>
 							<td class="center "><?= $value['modify_datetime'] ?></td>
 							<td class="center ">
 								<a href="/admin/<?=$cur_channel['code']?>/update/<?= $value['id'] ?>">

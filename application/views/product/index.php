@@ -6,11 +6,13 @@
     </div>
 </div>
 
+<script>JS_PATH = 'product';</script>
+
 <div class="container">
     <div class="main mb112">
         <div class="clearfix">
         	<div class="subnav pull-left">
-			    <h2>营销动态</h2>
+			    <h2>产品服务</h2>
 			    <div class="hr"></div>
 			    
 	            <?php $this->load->view('/common/subnav.php'); ?>
@@ -27,14 +29,12 @@
                 <div class="list-block non-border">
 
                     <?php if($cur_channel['ctype']==1): ?>
-                    
-                    <h3 class="area-title"><?= $cur_channel['name'] ?></h3>
 
                     <?php $this->load->view('/common/rtext_list.php'); ?>
 
                 	<?php elseif($cur_channel['ctype']==2): ?>
 
-                	<?php $this->load->view('/common/pic_list.php'); ?>
+                	<?php $this->load->view('/common/sp_pic_list.php'); ?>
                 	
                 	<?php endif ?>
 

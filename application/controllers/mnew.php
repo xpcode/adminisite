@@ -14,7 +14,7 @@ class Mnew extends Basic {
 		$this->load->model('article_model');
 	}
 
-	public function index($sub_channel_id=27)
+	public function index($sub_channel_id=27, $cur_page=1)
 	{
 		$data['banner'] = $this->getbanner($this->channel_id);
 		$data['channel_code'] = $this->channel_code;
@@ -26,21 +26,22 @@ class Mnew extends Basic {
 		
 		$this->load->library('pagination');
 
-		$config['base_url'] = '/mcase/index/'.$sub_channel_id;
+		$config['base_url'] = '/mnew/index/'.$sub_channel_id;
 		$config['uri_segment'] = 4;
-		$config['per_page'] = 20;
+
+		if($sub_channel_id==27){
+			$config['per_page'] = 5;
+
+		} elseif($sub_channel_id==28){
+			$config['per_page'] = 25;
+		}
+
 		$config['total_rows'] = $this->article_model->count($param);
 
 		$this->pagination->initialize($config);
-
+		
 		$data['pagination'] = $this->pagination->create_links();
-
-		if($sub_channel_id==27){
-			$data['rtext_list'] = $this->article_model->get_bycolumn($param, 'DESC', NULL, 5);
-
-		} elseif($sub_channel_id==28){
-			$data['rtext_list'] = $this->article_model->get_bycolumn($param, 'DESC', NULL, 25);
-		}
+		$data['rtext_list'] = $this->article_model->get_bycolumn($param, 'DESC', ($cur_page-1)*$config['per_page'], $config['per_page']);
 
 		$this->load->view('mnew/index', $data);
 	}

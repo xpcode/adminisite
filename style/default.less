@@ -142,8 +142,20 @@
 	margin-bottom: 112px;
 }
 
+.mb20 {
+	margin-bottom: 20px;
+}
+
+.mb5 {
+	margin-bottom: 5px !important;
+}
+
 .mt16px {
 	margin-top: 16px;
+}
+
+.border-ccc {
+	border: 5px solid #CCC !important;
 }
 
 .pl23 {
@@ -344,6 +356,10 @@
 				top: 2px;
 				*top: -2px;
 			}
+
+			a {
+				color: #339933;
+			}
 		}
 
 		.detail-imglist {
@@ -396,6 +412,11 @@
 				box-shadow: none;
 				text-shadow: none;
 				font-size: 12px;
+
+				a {
+					color: #FFF;
+					background-color: transparent;
+				}
 			}
 
 			.btn-disabled {
@@ -611,13 +632,19 @@
 			width: 145px;
 			height: 145px;
 			border: 5px solid #339933;
-			margin-left: 30px;
-			margin-bottom: 45px;
+			margin-left: 22px;
+			margin-bottom: 50px;
+			position: relative;
 
 			img {
 				display: block;
 				width: 145px;
 				height: 145px;
+			}
+
+			img.att {
+				position: absolute;
+				top: 0;
 			}
 
 			div {
@@ -632,7 +659,6 @@
 			}
 
 			.img-title {
-				padding: 5px 0;
 				color: #393;
 
 				a {
