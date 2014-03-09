@@ -6,6 +6,8 @@
     </div>
 </div>
 
+<script>JS_PATH = 'mcase';</script>
+
 <div class="container">
     <div class="main mb112">
         <div class="clearfix">
@@ -39,19 +41,13 @@
                 	<?php elseif($cur_channel['ctype']==2): ?>
 
                 	<?php $this->load->view('/common/pic_list.php'); ?>
-
-                	<?php elseif($cur_channel['ctype']==3): ?>
-
-                	<?php $this->load->view('/common/re_contact_list.php'); ?>
                 	
                 	<?php endif ?>
 
                 </div>
 
                 <?php if(!empty($pagination)): ?>
-
                 <?= $pagination ?>
-
                 <?php endif ?>
 
                 <?php endif ?>

@@ -5,6 +5,8 @@
     </div>
 </div>
 
+<script>JS_PATH = 'mnew';</script>
+
 <div class="container">
     <div class="main mb112">
         <div class="clearfix">

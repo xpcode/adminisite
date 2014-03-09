@@ -12,28 +12,31 @@
 
 </ul>
 
+<?php if(!empty($pic_list) AND is_array($pic_list)): ?>
+
+<?php $temp=0; $c=count($pic_list); ?>
+<?php foreach ($pic_list as $key=>$value): ?>
+
+<?php if($temp%5==0): ?>
 <table class="nav-adcate-detail">
     <tbody>
-        <tr><td>
-            <img alt="" src="/style/images/case_ad_01.gif">
-            <div>中国艺术科技研究院</div>
-        </td>
-        <td>
-            <img alt="" src="/style/images/case_ad_01.gif">
-            <div>中国印刷标准委员会</div>
-        </td>
-        <td>
-            <img alt="" src="/style/images/case_ad_01.gif">
-            <div>北京印刷学院</div>
-        </td>
-        <td>
-            <img alt="" src="/style/images/case_ad_01.gif">
-            <div>武汉大学</div>
-        </td>
-        <td>
-            <img alt="" src="/style/images/case_ad_01.gif">
-            <div>西安理工大学</div>
-        </td>
-    </tr></tbody>
+        <tr>
+<?php endif ?>
+            
+            <?php $temp++ ?>
+            <td>
+                <img alt="" src="<?= $value['filename'] ?>">
+                <div><?= $value['title'] ?></div>
+            </td>
+
+<?php if($temp==5 || $key+1==$c): ?>
+        </tr>
+    </tbody>
 </table>
+<?php endif ?>
+
+<?php endforeach ?>
+
+<?php endif ?>
+
 <div class="nav-adcate-desc">雅昌还与国内数十家研究、教育单位，行业协会建立了密切的技术、人才合作交流。</div>

@@ -5,6 +5,9 @@
         <?php $this->load->view('/common/banner.php'); ?>
     </div>
 </div>
+
+<script>JS_PATH = 'index';</script>
+
 <div class="main bg_grid">
     <div class="container">
         <div class="guide">

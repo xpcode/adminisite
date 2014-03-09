@@ -21,7 +21,7 @@
 	</ul>
 </div>
 
-<?php if($cur_channel['id'] == 7 AND !empty($channels_2)): ?>
+<?php if(($cur_channel['id'] == 7 || $cur_channel['id']==14) AND !empty($channels_2)): ?>
 <div>
 	<ul class="breadcrumb clearfix">
 		<li>所属频道：</li>

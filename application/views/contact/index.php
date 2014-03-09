@@ -6,6 +6,8 @@
     </div>
 </div>
 
+<script>JS_PATH = 'contact';</script>
+
 <div class="container">
     <div class="main mb112">
         <div class="clearfix">

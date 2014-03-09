@@ -5,7 +5,11 @@
 				图片管理
 			</h2>
 			<div class="pull-right">
+				<?php if($cur_channel['id']==7||$cur_channel['id']==14): ?>
+				[<a href="/admin/pic/add/<?= $cur_channel['code'] ?>/1/<?= $cur_channel_2['id'] ?>">添加图片</a>]
+				<?php else: ?>
 				[<a href="/admin/pic/add/<?= $cur_channel['code'] ?>/1/<?= $cur_channel['id'] ?>">添加图片</a>]
+				<?php endif ?>
 			</div>
 		</div>
 		<div class="box-content">

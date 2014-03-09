@@ -48,11 +48,12 @@ class Basic_article extends Basic_Controller {
 		$data['pagination'] = $this->pagination->create_links();
 		$data["articles"] = $articles;
 		$data["channels"] = $this->channel_model->get_by(array('pid'=>$channel['id']));
-		$data["pics"] = $this->pic_model->get_by(array('channel_id'=>$channel_id));
 		$data['cur_channel'] = $this->channel_model->get_byid($channel_id);
 		$data['cur_channel']['code']=$this->channel_code;
+		
+		$data["pics"] = $this->pic_model->get_by($param);
 
-		if($channel_id==7){
+		if($channel_id==7 || $channel_id==14){
 			$data['channels_2'] = $this->channel_model->get_by(array('pid'=>$channel_id));
 			$data['cur_channel_2'] = $this->channel_model->get_byid($channel_id_2);
 		}

@@ -28,7 +28,7 @@
 					<tbody role="alert" aria-live="polite" aria-relevant="all">
 						<?php foreach ($articles as $key => $value): ?>
 						<tr class="<?= $key%2==0 ? 'odd': 'even' ?>">
-							<td class="  sorting_1"><?= $value['title'] ?></td>
+							<td class="  sorting_1" style="width:30%"><?= $value['title'] ?></td>
 							<td class="center " style="width:40%"><?= $value['intro'] ?></td>
 							<td class="center "><?= $value['modify_datetime'] ?></td>
 							<td class="center ">

@@ -7,6 +7,8 @@ class Mcase extends Basic {
 	function __construct() {
 		parent::__construct();
 
+		$this->load->model('channel_model');
+
 		$this->channel_id = 3;
 		$this->channel_code = 'mcase';
 	}
@@ -19,7 +21,11 @@ class Mcase extends Basic {
 
 		$cur_channel = $this->channel_model->get_byid($sub_channel_id);
 
-		$param['channel_id'] = $sub_channel_id;
+		if($sub_channel_id==14){
+			$param['channel_id'] = $sub_channel_id_2;
+		} else {
+			$param['channel_id'] = $sub_channel_id;
+		}
 
 		if($sub_channel_id==14){
 			$data['channels_2'] = $this->channel_model->get_by(array('pid'=>14));
@@ -33,23 +39,24 @@ class Mcase extends Basic {
 
 			$config['base_url'] = '/mcase/index/'.$sub_channel_id;
 			$config['uri_segment'] = 4;
-			$config['per_page'] = 20;
 
 			if($cur_channel['ctype']==1){
 				$this->load->model('article_model');
 
 				$config['total_rows'] = $this->article_model->count($param);
+				$config['per_page'] = 5;
 
-				$data['rtext_list'] = $this->article_model->get_bycolumn($param, 'DESC', NULL, 5);
+				$data['rtext_list'] = $this->article_model->get_bycolumn($param, 'ASC', ($cur_page-1)*$config['per_page'], $config['per_page']);
 
 			} else if($cur_channel['ctype']==2) {
 				$this->load->model('pic_model');
 
 				$config['total_rows'] = $this->pic_model->count($param);
+				$config['per_page'] = 16;
 
 				$param['itype'] = 1;
 
-				$data['pic_list'] = $this->pic_model->get_bycolumn($param, 'DESC', NULL, 20);
+				$data['pic_list'] = $this->pic_model->get_bycolumn($param, 'DESC', ($cur_page-1)*$config['per_page'], $config['per_page']);
 			}
 
 			$this->pagination->initialize($config);
@@ -66,5 +73,18 @@ class Mcase extends Basic {
 		$data['cur_channel'] = $cur_channel;
 
 		$this->load->view('mcase/index', $data);
+	}
+
+	public function detail($sub_channel_id, $article_id){
+		$this->load->model('article_model');
+				
+		$data['banner'] = $this->getbanner($this->channel_id);
+		$data['channel_code'] = $this->channel_code;
+		$data['channel_name'] = $this->get_channelid_bycode($this->channel_code)['name'];
+		$data['channels'] = $this->channel_model->get_by(array('pid'=>$this->channel_id));
+		$data['cur_channel'] = $this->channel_model->get_byid($sub_channel_id);
+		$data['articleinfo'] = $this->article_model->get_byid($article_id);
+
+		$this->load->view('mnew/sp_detail', $data);
 	}
 }
