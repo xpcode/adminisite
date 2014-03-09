@@ -6,7 +6,7 @@
 .header .nav li .left8{left:8px}
 .header .nav li.active em{display:block}
 .footer{height:100px;line-height:100px;text-align:center;font-size:13px}
-.banner{border-bottom:1px solid #ebebeb;background-color:#fff}.banner img{width:1000px;height:200px}
+.banner{border-bottom:1px solid #ebebeb;background-color:#fff;position:relative}.banner img{width:1000px;height:200px;position:absolute}
 .banner .container{position:relative;height:200px}
 .banner .h320{height:320px}.banner .h320 img{height:320px}
 .banner .rotate-btns{position:absolute;top:297px;left:390px;margin:0}.banner .rotate-btns li{width:40px;height:12px;background-color:#ebebeb;float:left;margin-right:5px;cursor:pointer}
@@ -24,6 +24,10 @@
 .pl23{padding-left:23px}
 .h-auto-pb10{height:auto !important;padding-bottom:10px}
 .w-auto{width:auto !important}
+.bshare-sinaminiblog{background:url(/style/images/icon_sina.gif) no-repeat !important;width:58px !important;height:58px !important;margin:0 10px 0 0 !important;padding:0 !important}
+.bshare-renren{background:url(/style/images/icon_ren.gif) no-repeat !important;width:58px !important;height:58px !important;margin:0 10px 0 0 !important;padding:0 !important}
+.bshare-weixin{background:url(/style/images/icon_weixin.gif) no-repeat !important;width:58px !important;height:58px !important;margin:0 10px 0 0 !important;padding:0 !important}
+.bshare-qqim{background:url(/style/images/icon_qq.gif) no-repeat !important;width:58px !important;height:58px !important;margin:0 !important;padding:0 !important}
 .container{width:1000px;margin:0 auto}.container ul,.container li{list-style-type:none}
 .container h1,.container h2,.container h3,.container h4{display:inline-block}
 .main .subnav{width:200px;height:1024px;border:1px solid #ccc}.main .subnav h2{display:block;margin:0 auto;background:url(images/bg_subnav_title.jpg) repeat-x;width:200px;height:70px;line-height:70px;font-size:24px;font-family:"黑体";color:#fff;text-align:center}
@@ -73,9 +77,9 @@
 .main .notice-block .notice-block-item{height:28px;line-height:28px;font-family:"microsoft yahei";font-size:13px}.main .notice-block .notice-block-item a{color:#999}
 .main .grid-group{width:710px}.main .grid-group .grid{float:left;margin-right:16px;margin-bottom:16px}
 .main .qalist-group{border:1px solid #ccc;background-color:#fff;width:686px;height:158px;font-family:"microsoft yahei"}.main .qalist-group .qalist-group-bg{width:666px;margin:10px auto 0;background:url(images/bg_index_title.gif) no-repeat}
-.main .qalist-group .qalistitem-title{padding-left:41px;color:#fff;height:36px;line-height:36px}
+.main .qalist-group .qalistitem-title{padding-left:41px;color:#fff;height:36px;line-height:36px;overflow:hidden}.main .qalist-group .qalistitem-title a{color:#fff}
 .main .qalist-group .qalist{width:215px;float:left}
-.main .qalist-group .qalist-item{color:#999;height:33px;line-height:40px;padding-left:15px;font-size:13px}.main .qalist-group .qalist-item a{color:#999}
+.main .qalist-group .qalist-item{color:#999;height:33px;line-height:40px;padding-left:15px;font-size:13px;overflow:hidden}.main .qalist-group .qalist-item a{color:#999}
 .main .qalist-group .qalist-item2{color:#999;padding-left:15px;font-size:13px}.main .qalist-group .qalist-item2 div{height:auto}
 .main .qalist-group .ml25{margin-left:25px}
 .main .icons-list,.main .icons-list-large{width:686px}.main .icons-list .icons-list-item,.main .icons-list-large .icons-list-item,.main .icons-list img,.main .icons-list-large img{width:88px;height:43px}

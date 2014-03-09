@@ -1,4 +1,5 @@
 <?php $this->load->view('/common/header.php'); ?>
+
 <div class="banner mb50">
     <div class="container">
         <?php $this->load->view('/common/banner.php'); ?>

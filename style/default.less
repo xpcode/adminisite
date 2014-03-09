@@ -77,10 +77,12 @@
 .banner {
 	border-bottom: 1px solid #EBEBEB;
 	background-color: #FFF;
+	position: relative;
 
 	img {
 		width: 1000px;
 		height: 200px;
+		position: absolute;
 	}
 
 	.container {
@@ -169,6 +171,38 @@
 
 .w-auto {
 	width: auto !important;
+}
+
+.bshare-sinaminiblog {
+	background: url(/style/images/icon_sina.gif) no-repeat !important;
+	width: 58px !important;
+	height: 58px !important;
+	margin: 0 10px 0 0 !important;
+	padding: 0 !important;
+}
+
+.bshare-renren {
+	background: url(/style/images/icon_ren.gif) no-repeat !important;
+	width: 58px !important;
+	height: 58px !important;
+	margin: 0 10px 0 0 !important;
+	padding: 0 !important;
+}
+
+.bshare-weixin {
+	background: url(/style/images/icon_weixin.gif) no-repeat !important;
+	width: 58px !important;
+	height: 58px !important;
+	margin: 0 10px 0 0 !important;
+	padding: 0 !important;
+}
+
+.bshare-qqim {
+	background: url(/style/images/icon_qq.gif) no-repeat !important;
+	width: 58px !important;
+	height: 58px !important;
+	margin: 0 !important;
+	padding: 0 !important;
 }
 
 .container {
@@ -566,6 +600,11 @@
 			color: #FFF;
 			height: 36px;
 			line-height: 36px;
+			overflow: hidden;
+
+			a {
+				color: #FFF;
+			}
 		}
 
 		.qalist {
@@ -579,6 +618,7 @@
 			line-height: 40px;
 			padding-left: 15px;
 			font-size: 13px;
+			overflow: hidden;
 
 			a {
 				color: #999;

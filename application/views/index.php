@@ -40,22 +40,31 @@
             <div class="qalist-group">
                 <div class="qalist-group-bg clearfix">
 
-                    <?php if(!empty($articles_qa_list)): ?>
-                    <?php foreach ($articles_qa_list as $articles_qa): ?>
-                        <?php if(!empty($articles_qa)): ?>
+                    <?php if(!empty($articles_qa)):
+                        $c = count($articles_qa);
 
-                        <?php foreach ($articles_qa as $key=>$value): ?>
-                        <div class="qalist">
-                            <?php if($key==0): ?>
-                            <div class="qalistitem-title"><a href="/article/<?= $value['id'] ?>"><?= $value['title'] ?></a></div>
-                            <?php else: ?>
-                            <div class="qalist-item"><a href="/article/<?= $value['id'] ?>"><?= $value['title'] ?></a></div>
-                            <?php endif ?>
-                        </div>
-                        <?php endforeach ?>
+                        $temp = 0;
+                    ?>
 
+                    <?php foreach ($articles_qa as $key=>$value): ?>
+
+                    <?php if($temp%4==0): $temp = 0; ?>
+                    <div class="qalist">
+                    <?php endif ?>
+
+                        <?php $temp++;
+                            if($key%4==0): ?>
+                        <div class="qalistitem-title"><a title="<?= $value['title'] ?>" href="/article/<?= $value['id'] ?>"><?= $value['title'] ?></a></div>
+                        <?php else: ?>
+                        <div class="qalist-item"><a title="<?= $value['title'] ?>" href="/article/<?= $value['id'] ?>"><?= $value['title'] ?></a></div>
                         <?php endif ?>
+
+                    <?php if($temp==4||$c==$key+1): ?>
+                    </div>
+                    <?php endif ?>
+
                     <?php endforeach ?>
+
                     <?php endif ?>
 
                 </div>
@@ -80,13 +89,13 @@
                 <img src="/style/images/index_tel.gif" alt=""></div>
             <div class="notice-block">
                 <h3>
-                    <img src="/style/images/bg_notice.gif" alt=""></h3>
+                    <img src="/style/images/bg_notice.jpg" alt=""></h3>
                 <ul>
 
                     <?php if(!empty($articles)): ?>
                     <?php foreach ($articles as $key=>$value): ?>
                     <li class="notice-block-item">
-                        <a href=""><?= $value['title'] ?></a>
+                        <a target='_blank' href="/mnew/detail/27/<?= $value['id'] ?>"><?= $value['title'] ?></a>
                     </li>
                     <?php endforeach ?>
                     <?php endif ?>
@@ -98,12 +107,15 @@
                 <span class="font3">这样联系...</span>
             </div>
             <div class="contacts">
-                <ul>
-                    <li>1</li>
-                    <li>2</li>
-                    <li>3</li>
-                    <li>4</li>
-                </ul>
+                <div class="bshare-custom icon-medium-plus" style="width: auto">
+                    <div class="bsPromo bsPromo2"></div>
+                    <a class="bshare-sinaminiblog" title="分享到新浪微博"></a>
+                    <a class="bshare-renren" title="分享到人人网"></a>
+                    <a class="bshare-weixin" title="分享到微信"></a>
+                    <a class="bshare-qqim" title="分享到QQ好友"></a>
+                </div>
+                <script src="http://static.bshare.cn/b/buttonLite.js#style=-1&amp;uuid=&amp;pophcol=3&amp;lang=zh" charset="utf-8" type="text/javascript"></script>
+                <script src="http://static.bshare.cn/b/bshareC0.js" charset="utf-8" type="text/javascript"></script>
             </div>
             <div>
                 <img src="/style/images/index_r2.gif" alt=""></div>
