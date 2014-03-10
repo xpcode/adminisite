@@ -4,6 +4,9 @@ load->view('/common/header.php'); ?>
     <div class="container">
         <img src="/style/images/banner_news.gif" alt=""></div>
 </div>
+
+<script>JS_PATH = 'contact';</script>
+
 <div class="container">
     <div class="main mb112">
         <div class="clearfix">
